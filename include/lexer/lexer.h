@@ -6,3 +6,10 @@
  * 
  * SPDX-License-Identifier: MIT
  */
+
+#include "token.h"
+
+/**
+ * @brief Function for initialization of lexer
+ */
+void lex_init(const char *src);
