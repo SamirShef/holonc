@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['value_0',['value',['../structToken.html#a06939408d17b4230a3b2698b818ee42c',1,'Token']]]
+  ['key_0',['key',['../structEntry.html#a1dd63c02eebed827bb7a763c4dbb5c1f',1,'Entry']]],
+  ['keywords_1',['keywords',['../lexer_8c.html#ac4864e9dae315725e2d2af1d06d7abb1',1,'lexer.c']]]
 ];

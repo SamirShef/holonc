@@ -1,5 +1,5 @@
 var structChunk =
 [
-    [ "code", "structChunk.html#a85d58647dfe0a0ccef529602ec5f0b67", null ],
-    [ "count", "structChunk.html#a1ca0133248fe039ef7a4451631dc250c", null ]
+    [ "code", "structChunk.html#a3bd97432faba57c9187c7d264995b33f", null ],
+    [ "count", "structChunk.html#a204895ec1d6938143d35f422fda0b060", null ]
 ];

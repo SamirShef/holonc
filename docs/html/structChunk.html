@@ -93,46 +93,46 @@ $(function(){initNavTree('structChunk.html','','structChunk-members'); });
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="structChunk.html" title="Chunk structure.">Chunk</a> structure.  
+<p>Base chunk structure.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="chunk_8h_source.html">chunk.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a85d58647dfe0a0ccef529602ec5f0b67" id="r_a85d58647dfe0a0ccef529602ec5f0b67"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85d58647dfe0a0ccef529602ec5f0b67">code</a> [<a class="el" href="chunk_8h.html#a75c081066a0bbc46bc37f531b3b0d796">MAX_CHANK_CODES_COUNT</a>]</td></tr>
-<tr class="memitem:a1ca0133248fe039ef7a4451631dc250c" id="r_a1ca0133248fe039ef7a4451631dc250c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ca0133248fe039ef7a4451631dc250c">count</a></td></tr>
+<tr class="memitem:a3bd97432faba57c9187c7d264995b33f" id="r_a3bd97432faba57c9187c7d264995b33f"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bd97432faba57c9187c7d264995b33f">code</a></td></tr>
+<tr class="memitem:a204895ec1d6938143d35f422fda0b060" id="r_a204895ec1d6938143d35f422fda0b060"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a204895ec1d6938143d35f422fda0b060">count</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="structChunk.html" title="Chunk structure.">Chunk</a> structure. </p>
+<div class="textblock"><p>Base chunk structure. </p>
 
 <p class="definition">Definition at line <a class="el" href="chunk_8h_source.html#l00024">24</a> of file <a class="el" href="chunk_8h_source.html">chunk.h</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="a85d58647dfe0a0ccef529602ec5f0b67" name="a85d58647dfe0a0ccef529602ec5f0b67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85d58647dfe0a0ccef529602ec5f0b67">&#9670;&#160;</a></span>code</h2>
+<a id="a3bd97432faba57c9187c7d264995b33f" name="a3bd97432faba57c9187c7d264995b33f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bd97432faba57c9187c7d264995b33f">&#9670;&#160;</a></span>code</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t Chunk::code[<a class="el" href="chunk_8h.html#a75c081066a0bbc46bc37f531b3b0d796">MAX_CHANK_CODES_COUNT</a>]</td>
+          <td class="memname">uint8_t* Chunk::code</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Array of instructions codes </p>
+<p>Dynamic array of instructions codes </p>
 
 <p class="definition">Definition at line <a class="el" href="chunk_8h_source.html#l00025">25</a> of file <a class="el" href="chunk_8h_source.html">chunk.h</a>.</p>
 
 </div>
 </div>
-<a id="a1ca0133248fe039ef7a4451631dc250c" name="a1ca0133248fe039ef7a4451631dc250c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ca0133248fe039ef7a4451631dc250c">&#9670;&#160;</a></span>count</h2>
+<a id="a204895ec1d6938143d35f422fda0b060" name="a204895ec1d6938143d35f422fda0b060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a204895ec1d6938143d35f422fda0b060">&#9670;&#160;</a></span>count</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t Chunk::count</td>
+          <td class="memname">size_t Chunk::count</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -143,7 +143,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/vm/<a class="el" href="chunk_8h_source.html">chunk.h</a></li>
+<li>/mnt/disk_ext4_0/holonc/include/vm/<a class="el" href="chunk_8h_source.html">chunk.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

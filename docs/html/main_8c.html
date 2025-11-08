@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>holonc: src/main.c File Reference</title>
+<title>holonc: /mnt/disk_ext4_0/holonc/src/main.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -95,15 +95,35 @@ $(function(){initNavTree('main_8c.html','',''); });
 
 <p>Compilator's entry point.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="vm_8h_source.html">../include/vm/vm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lexer_8h_source.html">../include/lexer/lexer.h</a>&quot;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="main_8c__incl.png" border="0" usemap="#asrc_2main_8c" loading="lazy" alt=""/></div>
-<map name="asrc_2main_8c" id="asrc_2main_8c">
-<area shape="rect" title="Compilator&#39;s entry point." alt="" coords="5,5,88,32"/>
-<area shape="rect" title=" " alt="" coords="16,80,77,107"/>
-<area shape="poly" title=" " alt="" coords="49,33,49,64,44,64,44,33"/>
+<div class="center"><img src="main_8c__incl.png" border="0" usemap="#a_2mnt_2disk__ext4__0_2holonc_2src_2main_8c" loading="lazy" alt=""/></div>
+<map name="a_2mnt_2disk__ext4__0_2holonc_2src_2main_8c" id="a_2mnt_2disk__ext4__0_2holonc_2src_2main_8c">
+<area shape="rect" title="Compilator&#39;s entry point." alt="" coords="103,5,267,48"/>
+<area shape="rect" href="vm_8h.html" title="Header file for define VM." alt="" coords="203,96,332,123"/>
+<area shape="poly" title=" " alt="" coords="208,47,246,83,242,87,204,51"/>
+<area shape="rect" title=" " alt="" coords="30,245,98,272"/>
+<area shape="poly" title=" " alt="" coords="104,43,56,64,36,79,19,97,12,114,9,131,14,167,29,202,47,231,42,234,24,205,9,169,3,131,6,112,15,95,32,75,54,59,102,39"/>
+<area shape="rect" href="lexer_8h.html" title="Header file for lexing analyze of source code on Holon." alt="" coords="29,96,178,123"/>
+<area shape="poly" title=" " alt="" coords="166,51,129,87,125,83,162,47"/>
+<area shape="rect" title=" " alt="" coords="356,96,417,123"/>
+<area shape="poly" title=" " alt="" coords="238,46,343,88,341,93,236,51"/>
+<area shape="rect" href="chunk_8h.html" title="Header file for define chunk structure." alt="" coords="119,171,187,197"/>
+<area shape="poly" title=" " alt="" coords="249,125,187,164,185,160,246,121"/>
+<area shape="poly" title=" " alt="" coords="139,200,93,237,89,233,136,196"/>
+<area shape="rect" title=" " alt="" coords="121,245,185,272"/>
+<area shape="poly" title=" " alt="" coords="156,198,156,230,150,230,150,198"/>
+<area shape="rect" title=" " alt="" coords="209,245,273,272"/>
+<area shape="poly" title=" " alt="" coords="170,196,216,233,212,237,167,200"/>
+<area shape="poly" title=" " alt="" coords="103,124,74,231,68,230,98,122"/>
+<area shape="rect" href="token_8h.html" title="Header file for define token structure." alt="" coords="210,171,275,197"/>
+<area shape="poly" title=" " alt="" coords="129,121,206,161,203,165,127,126"/>
+<area shape="poly" title=" " alt="" coords="245,198,244,230,239,230,239,198"/>
 </map>
 </div>
 </div>
@@ -139,7 +159,74 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00012">12</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00015">15</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_ac0f2228420376f4db7e1274f2b41667c_cgraph.png" border="0" usemap="#amain_8c_ac0f2228420376f4db7e1274f2b41667c_cgraph" loading="lazy" alt=""/></div>
+<map name="amain_8c_ac0f2228420376f4db7e1274f2b41667c_cgraph" id="amain_8c_ac0f2228420376f4db7e1274f2b41667c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,157,55,184"/>
+<area shape="rect" href="chunk_8c.html#ae222cf9b9859726a78d345a85d38f79f" title="Function for add new operation code into chunk." alt="" coords="132,5,210,32"/>
+<area shape="poly" title=" " alt="" coords="33,156,56,101,76,70,101,42,116,32,119,36,104,46,80,73,61,104,38,158"/>
+<area shape="rect" href="chunk_8c.html#ae056750c965090646f509c2c0e24a9d2" title="Function for create chunk." alt="" coords="121,56,220,83"/>
+<area shape="poly" title=" " alt="" coords="39,155,65,124,101,93,109,87,112,92,104,97,69,128,43,159"/>
+<area shape="rect" href="vm_8c.html#ad8c84abbf9ca339d92a4dddd473b7478" title="Function for create chunk." alt="" coords="130,107,212,133"/>
+<area shape="poly" title=" " alt="" coords="54,160,117,136,119,141,56,165"/>
+<area shape="rect" href="chunk_8c.html#a703aa5ae9eb8fbb45d415f9645920bfe" title=" " alt="" coords="103,157,239,184"/>
+<area shape="poly" title=" " alt="" coords="55,168,87,168,87,173,55,173"/>
+<area shape="rect" href="vm_8c.html#ad032bf020ac343ca3d00239c0f80ca7a" title="Function to free up the memory allocated for the VM." alt="" coords="137,208,205,235"/>
+<area shape="poly" title=" " alt="" coords="56,177,123,201,121,206,54,182"/>
+<area shape="rect" href="lexer_8c.html#ac40ab05e01194ad04553b4d1f22489ea" title="Function for initialization of lexer." alt="" coords="140,259,202,285"/>
+<area shape="poly" title=" " alt="" coords="43,183,69,213,104,244,126,256,124,261,101,249,65,217,39,186"/>
+<area shape="rect" href="lexer_8c.html#a78fb3ebf2f5f7cee0c2a5b2932ce30b1" title="Function for tokenizing string." alt="" coords="124,512,218,539"/>
+<area shape="poly" title=" " alt="" coords="39,184,161,496,156,498,34,186"/>
+<area shape="rect" href="chunk_8c.html#ab50820bfbb6f1211ea5ee34ec80c8b41" title=" " alt="" coords="316,157,430,184"/>
+<area shape="poly" title=" " alt="" coords="239,168,301,168,301,173,239,173"/>
+<area shape="rect" href="chunk_8c.html#a546ab740bbd74ae2c684de303ce75aca" title=" " alt="" coords="507,157,684,184"/>
+<area shape="poly" title=" " alt="" coords="430,168,491,168,491,173,430,173"/>
+<area shape="rect" href="lexer_8c.html#ad02e160db50a5887aed1c98d22d57e11" title="Function for initializing all Holon&#39;s keywords." alt="" coords="310,233,436,260"/>
+<area shape="poly" title=" " alt="" coords="202,266,295,254,295,259,203,271"/>
+<area shape="rect" href="lexer_8c.html#afdb3aea8e928a4e6dee637f7983fbb18" title="Function for add new keyword into global variable &#39;keywords&#39;." alt="" coords="534,233,657,260"/>
+<area shape="poly" title=" " alt="" coords="436,244,519,244,519,249,436,249"/>
+<area shape="rect" href="lexer_8c.html#a3e1a9bc97fee711a396c2bc832165af1" title="Function for add new token into array of tokens." alt="" coords="320,765,426,792"/>
+<area shape="poly" title=" " alt="" coords="178,538,190,578,212,633,245,693,265,720,289,745,308,758,305,762,285,749,261,724,240,696,207,636,185,580,173,540"/>
+<area shape="rect" href="lexer_8c.html#af37b42415a56a01910dd849962c8cec8" title=" " alt="" coords="745,588,839,615"/>
+<area shape="poly" title=" " alt="" coords="180,538,195,568,218,606,249,645,288,675,343,703,392,722,437,735,481,739,526,737,573,729,683,694,709,680,732,663,769,625,773,629,736,667,711,685,685,698,574,734,527,743,481,745,436,740,390,728,341,708,286,680,245,648,213,609,190,570,175,540"/>
+<area shape="rect" href="lexer_8c.html#a71651cde2df91445ea5c3b85f2ec8865" title=" " alt="" coords="900,436,973,463"/>
+<area shape="poly" title=" " alt="" coords="183,509,226,468,286,423,344,389,391,366,441,350,507,336,605,318,685,312,723,315,762,324,805,339,853,362,891,390,919,422,915,425,887,393,851,366,803,344,761,329,722,320,685,317,606,323,508,341,443,355,393,371,346,394,288,428,230,472,187,513"/>
+<area shape="rect" href="lexer_8c.html#ac7e82d9219ab1a208f3d016e0d1a7935" title="Funtion for tokenizing character literal." alt="" coords="287,639,459,665"/>
+<area shape="poly" title=" " alt="" coords="195,537,339,628,336,632,192,541"/>
+<area shape="rect" href="lexer_8c.html#ac36c7e6a0463c68259855252342b01e6" title="Funtion for tokenizing identifier." alt="" coords="540,436,651,463"/>
+<area shape="poly" title=" " alt="" coords="218,512,287,497,524,457,525,462,287,503,219,517"/>
+<area shape="rect" href="lexer_8c.html#a88560b0c619c1dc649255a6198156da0" title="Funtion for tokenizing number literal." alt="" coords="523,791,668,817"/>
+<area shape="poly" title=" " alt="" coords="175,539,181,591,198,665,213,704,232,741,257,775,289,802,317,817,349,827,381,833,414,835,479,830,535,819,536,824,480,836,415,840,381,838,347,833,315,822,285,806,253,778,228,744,208,706,193,666,176,592,170,539"/>
+<area shape="rect" href="lexer_8c.html#af9959271da47322edaf7d4a79c119944" title="Funtion for tokenizing opeartor." alt="" coords="538,385,653,412"/>
+<area shape="poly" title=" " alt="" coords="194,509,236,486,286,464,347,445,410,429,522,407,523,412,411,434,349,450,288,469,238,491,196,514"/>
+<area shape="rect" href="lexer_8c.html#aeba6c3bf8f2d4db2a9ede0b34946873e" title="Funtion for tokenizing string literal." alt="" coords="298,512,448,539"/>
+<area shape="poly" title=" " alt="" coords="218,523,282,523,282,528,218,528"/>
+<area shape="poly" title=" " alt="" coords="804,586,910,472,914,476,808,590"/>
+<area shape="poly" title=" " alt="" coords="419,663,473,676,540,686,612,688,648,683,683,675,728,652,765,623,768,627,731,657,685,680,649,689,612,693,539,692,472,682,418,668"/>
+<area shape="poly" title=" " alt="" coords="389,664,462,752,474,775,481,795,490,812,509,827,554,845,592,847,633,839,683,827,736,815,777,803,813,783,850,746,873,714,891,679,915,604,928,533,932,478,938,478,933,534,920,605,896,681,877,717,854,750,816,787,779,808,737,820,684,832,634,845,593,853,553,850,506,832,486,816,477,797,469,777,457,755,385,668"/>
+<area shape="rect" href="lexer_8c.html#aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd" title="Function for create new token." alt="" coords="732,487,852,513"/>
+<area shape="poly" title=" " alt="" coords="412,636,737,517,739,522,413,641"/>
+<area shape="rect" href="lexer_8c.html#a75a3a26fb5b6c4dd9ba874aebd377073" title="Function for getting escape&#45;secuence character." alt="" coords="508,639,683,665"/>
+<area shape="poly" title=" " alt="" coords="459,649,492,649,492,655,459,655"/>
+<area shape="poly" title=" " alt="" coords="650,635,729,615,731,620,651,641"/>
+<area shape="poly" title=" " alt="" coords="616,461,763,576,759,580,613,465"/>
+<area shape="poly" title=" " alt="" coords="652,447,884,447,884,452,652,452"/>
+<area shape="poly" title=" " alt="" coords="651,461,723,480,722,485,650,466"/>
+<area shape="poly" title=" " alt="" coords="650,788,682,770,703,745,729,707,774,627,779,630,733,710,708,749,685,774,653,792"/>
+<area shape="poly" title=" " alt="" coords="643,788,682,770,736,737,776,708,810,674,850,625,875,587,895,547,924,477,929,479,900,549,879,590,854,628,814,677,779,712,739,741,685,774,645,792"/>
+<area shape="poly" title=" " alt="" coords="605,788,641,740,681,676,705,625,729,575,767,524,771,527,734,577,710,628,686,679,645,743,610,792"/>
+<area shape="poly" title=" " alt="" coords="655,405,685,422,706,446,715,470,721,495,734,524,771,574,767,578,729,527,716,497,710,472,701,449,682,426,652,410"/>
+<area shape="poly" title=" " alt="" coords="654,402,747,412,852,428,885,435,884,440,852,433,747,418,654,407"/>
+<area shape="poly" title=" " alt="" coords="654,410,685,422,728,447,765,474,761,479,725,451,682,426,652,415"/>
+<area shape="poly" title=" " alt="" coords="449,536,730,588,729,593,448,542"/>
+<area shape="poly" title=" " alt="" coords="379,510,397,479,424,440,461,401,483,384,506,371,556,352,599,341,640,339,678,343,757,366,853,402,902,425,900,430,851,406,756,371,677,348,640,344,600,347,557,357,508,376,486,389,465,405,429,443,401,482,384,513"/>
+<area shape="poly" title=" " alt="" coords="449,518,716,502,717,507,449,523"/>
+<area shape="poly" title=" " alt="" coords="400,537,558,628,556,633,397,541"/>
+</map>
+</div>
 
 </div>
 </div>

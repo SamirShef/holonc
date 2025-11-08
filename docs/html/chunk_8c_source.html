@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>holonc: src/vm/chunk.c Source File</title>
+<title>holonc: /mnt/disk_ext4_0/holonc/src/vm/chunk.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -95,36 +95,71 @@ $(function(){initNavTree('chunk_8c_source.html','',''); });
 <a href="chunk_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="chunk_8h.html">../../include/vm/chunk.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
-<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="chunk_8c.html#ae056750c965090646f509c2c0e24a9d2">   20</a></span><a class="code hl_struct" href="structChunk.html">Chunk</a> *<a class="code hl_function" href="chunk_8c.html#ae056750c965090646f509c2c0e24a9d2">create_chunk</a>() {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_struct" href="structChunk.html">Chunk</a> *chunk = (<a class="code hl_struct" href="structChunk.html">Chunk</a> *)malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="structChunk.html">Chunk</a>));</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    chunk-&gt;<a class="code hl_variable" href="structChunk.html#a1ca0133248fe039ef7a4451631dc250c">count</a> = 0;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordflow">return</span> chunk;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="chunk_8c.html#ae056750c965090646f509c2c0e24a9d2">   16</a></span><a class="code hl_struct" href="structChunk.html">Chunk</a> *<a class="code hl_function" href="chunk_8c.html#ae056750c965090646f509c2c0e24a9d2">create_chunk</a>() {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_struct" href="structChunk.html">Chunk</a> *chunk = (<a class="code hl_struct" href="structChunk.html">Chunk</a> *)malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="structChunk.html">Chunk</a>));</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    chunk-&gt;<a class="code hl_variable" href="structChunk.html#a3bd97432faba57c9187c7d264995b33f">code</a> = malloc(0);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    chunk-&gt;<a class="code hl_variable" href="structChunk.html#a204895ec1d6938143d35f422fda0b060">count</a> = 0;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordflow">return</span> chunk;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
 </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
-<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="chunk_8c.html#a8d88cfbb10c69b79613ce6e471c0b48a">   34</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="chunk_8c.html#a8d88cfbb10c69b79613ce6e471c0b48a">set_code</a>(<a class="code hl_struct" href="structChunk.html">Chunk</a> *chunk, <a class="code hl_enumeration" href="chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20">OpCode</a> code) {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    chunk-&gt;<a class="code hl_variable" href="structChunk.html#a85d58647dfe0a0ccef529602ec5f0b67">code</a>[chunk-&gt;<a class="code hl_variable" href="structChunk.html#a1ca0133248fe039ef7a4451631dc250c">count</a>++] = code;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="chunk_8c.html#ae222cf9b9859726a78d345a85d38f79f">   23</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="chunk_8c.html#ae222cf9b9859726a78d345a85d38f79f">add_code</a>(<a class="code hl_struct" href="structChunk.html">Chunk</a> *chunk, <a class="code hl_enumeration" href="chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20">OpCode</a> code) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    chunk-&gt;<a class="code hl_variable" href="structChunk.html#a3bd97432faba57c9187c7d264995b33f">code</a> = realloc(chunk-&gt;<a class="code hl_variable" href="structChunk.html#a3bd97432faba57c9187c7d264995b33f">code</a>, <span class="keyword">sizeof</span>(uint8_t) * (chunk-&gt;<a class="code hl_variable" href="structChunk.html#a204895ec1d6938143d35f422fda0b060">count</a> + 1));</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    chunk-&gt;<a class="code hl_variable" href="structChunk.html#a3bd97432faba57c9187c7d264995b33f">code</a>[chunk-&gt;<a class="code hl_variable" href="structChunk.html#a204895ec1d6938143d35f422fda0b060">count</a>++] = code;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
 </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
-<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="chunk_8c.html#ae42388329631282d26cb07187397a788">   45</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="chunk_8c.html#ae42388329631282d26cb07187397a788">free_chunk</a>(<a class="code hl_struct" href="structChunk.html">Chunk</a> *chunk) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    free(chunk-&gt;<a class="code hl_variable" href="structChunk.html#a85d58647dfe0a0ccef529602ec5f0b67">code</a>);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    free(chunk);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="chunk_8c.html#ae42388329631282d26cb07187397a788">   28</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="chunk_8c.html#ae42388329631282d26cb07187397a788">free_chunk</a>(<a class="code hl_struct" href="structChunk.html">Chunk</a> *chunk) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    free(chunk-&gt;<a class="code hl_variable" href="structChunk.html#a3bd97432faba57c9187c7d264995b33f">code</a>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    free(chunk);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
 </div>
-<div class="ttc" id="achunk_8c_html_a8d88cfbb10c69b79613ce6e471c0b48a"><div class="ttname"><a href="chunk_8c.html#a8d88cfbb10c69b79613ce6e471c0b48a">set_code</a></div><div class="ttdeci">void set_code(Chunk *chunk, OpCode code)</div><div class="ttdoc">Function for add new operation code into chunk.</div><div class="ttdef"><b>Definition</b> <a href="#l00034">chunk.c:34</a></div></div>
-<div class="ttc" id="achunk_8c_html_ae056750c965090646f509c2c0e24a9d2"><div class="ttname"><a href="chunk_8c.html#ae056750c965090646f509c2c0e24a9d2">create_chunk</a></div><div class="ttdeci">Chunk * create_chunk()</div><div class="ttdoc">Function for create chunk.</div><div class="ttdef"><b>Definition</b> <a href="#l00020">chunk.c:20</a></div></div>
-<div class="ttc" id="achunk_8c_html_ae42388329631282d26cb07187397a788"><div class="ttname"><a href="chunk_8c.html#ae42388329631282d26cb07187397a788">free_chunk</a></div><div class="ttdeci">void free_chunk(Chunk *chunk)</div><div class="ttdoc">Function to free up the memory allocated for the chunk.</div><div class="ttdef"><b>Definition</b> <a href="#l00045">chunk.c:45</a></div></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="chunk_8c.html#a703aa5ae9eb8fbb45d415f9645920bfe">   33</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="chunk_8c.html#a703aa5ae9eb8fbb45d415f9645920bfe">disassembly_chunk</a>(<a class="code hl_struct" href="structChunk.html">Chunk</a> *chunk) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; chunk-&gt;<a class="code hl_variable" href="structChunk.html#a204895ec1d6938143d35f422fda0b060">count</a>; i++) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_function" href="chunk_8c.html#ab50820bfbb6f1211ea5ee34ec80c8b41">print_instruction</a>(chunk-&gt;<a class="code hl_variable" href="structChunk.html#a3bd97432faba57c9187c7d264995b33f">code</a>[i]);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="chunk_8c.html#ab50820bfbb6f1211ea5ee34ec80c8b41">   39</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="chunk_8c.html#ab50820bfbb6f1211ea5ee34ec80c8b41">print_instruction</a>(<a class="code hl_enumeration" href="chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20">OpCode</a> code) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    printf(<span class="stringliteral">&quot;%04d %s\n&quot;</span>, code, <a class="code hl_function" href="chunk_8c.html#a546ab740bbd74ae2c684de303ce75aca">instruction_name_by_code</a>(code));</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="chunk_8c.html#a546ab740bbd74ae2c684de303ce75aca">   43</a></span><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="chunk_8c.html#a546ab740bbd74ae2c684de303ce75aca">instruction_name_by_code</a>(<a class="code hl_enumeration" href="chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20">OpCode</a> code) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">switch</span> (code) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20ad436c18b194473f5ec64c28b774e41b3">OP_RETURN</a>:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;RETURN&quot;</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            fprintf(stderr, <span class="stringliteral">&quot;Unknown operation code: %04d\n&quot;</span>, code);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            exit(1);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
+</div>
+<div class="ttc" id="achunk_8c_html_a546ab740bbd74ae2c684de303ce75aca"><div class="ttname"><a href="chunk_8c.html#a546ab740bbd74ae2c684de303ce75aca">instruction_name_by_code</a></div><div class="ttdeci">const char * instruction_name_by_code(OpCode code)</div><div class="ttdef"><b>Definition</b> <a href="#l00043">chunk.c:43</a></div></div>
+<div class="ttc" id="achunk_8c_html_a703aa5ae9eb8fbb45d415f9645920bfe"><div class="ttname"><a href="chunk_8c.html#a703aa5ae9eb8fbb45d415f9645920bfe">disassembly_chunk</a></div><div class="ttdeci">void disassembly_chunk(Chunk *chunk)</div><div class="ttdef"><b>Definition</b> <a href="#l00033">chunk.c:33</a></div></div>
+<div class="ttc" id="achunk_8c_html_ab50820bfbb6f1211ea5ee34ec80c8b41"><div class="ttname"><a href="chunk_8c.html#ab50820bfbb6f1211ea5ee34ec80c8b41">print_instruction</a></div><div class="ttdeci">void print_instruction(OpCode code)</div><div class="ttdef"><b>Definition</b> <a href="#l00039">chunk.c:39</a></div></div>
+<div class="ttc" id="achunk_8c_html_ae056750c965090646f509c2c0e24a9d2"><div class="ttname"><a href="chunk_8c.html#ae056750c965090646f509c2c0e24a9d2">create_chunk</a></div><div class="ttdeci">Chunk * create_chunk()</div><div class="ttdoc">Function for create chunk.</div><div class="ttdef"><b>Definition</b> <a href="#l00016">chunk.c:16</a></div></div>
+<div class="ttc" id="achunk_8c_html_ae222cf9b9859726a78d345a85d38f79f"><div class="ttname"><a href="chunk_8c.html#ae222cf9b9859726a78d345a85d38f79f">add_code</a></div><div class="ttdeci">void add_code(Chunk *chunk, OpCode code)</div><div class="ttdoc">Function for add new operation code into chunk.</div><div class="ttdef"><b>Definition</b> <a href="#l00023">chunk.c:23</a></div></div>
+<div class="ttc" id="achunk_8c_html_ae42388329631282d26cb07187397a788"><div class="ttname"><a href="chunk_8c.html#ae42388329631282d26cb07187397a788">free_chunk</a></div><div class="ttdeci">void free_chunk(Chunk *chunk)</div><div class="ttdoc">Function to free up the memory allocated for the chunk.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">chunk.c:28</a></div></div>
 <div class="ttc" id="achunk_8h_html"><div class="ttname"><a href="chunk_8h.html">chunk.h</a></div><div class="ttdoc">Header file for define chunk structure.</div></div>
 <div class="ttc" id="achunk_8h_html_a7e85f04e30e1c4c4607773335350fe20"><div class="ttname"><a href="chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20">OpCode</a></div><div class="ttdeci">OpCode</div><div class="ttdoc">All bytecode&#39;s operations codes.</div><div class="ttdef"><b>Definition</b> <a href="chunk_8h_source.html#l00017">chunk.h:17</a></div></div>
-<div class="ttc" id="astructChunk_html"><div class="ttname"><a href="structChunk.html">Chunk</a></div><div class="ttdoc">Chunk structure.</div><div class="ttdef"><b>Definition</b> <a href="chunk_8h_source.html#l00024">chunk.h:24</a></div></div>
-<div class="ttc" id="astructChunk_html_a1ca0133248fe039ef7a4451631dc250c"><div class="ttname"><a href="structChunk.html#a1ca0133248fe039ef7a4451631dc250c">Chunk::count</a></div><div class="ttdeci">uint32_t count</div><div class="ttdef"><b>Definition</b> <a href="chunk_8h_source.html#l00026">chunk.h:26</a></div></div>
-<div class="ttc" id="astructChunk_html_a85d58647dfe0a0ccef529602ec5f0b67"><div class="ttname"><a href="structChunk.html#a85d58647dfe0a0ccef529602ec5f0b67">Chunk::code</a></div><div class="ttdeci">uint8_t code[MAX_CHANK_CODES_COUNT]</div><div class="ttdef"><b>Definition</b> <a href="chunk_8h_source.html#l00025">chunk.h:25</a></div></div>
+<div class="ttc" id="achunk_8h_html_a7e85f04e30e1c4c4607773335350fe20ad436c18b194473f5ec64c28b774e41b3"><div class="ttname"><a href="chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20ad436c18b194473f5ec64c28b774e41b3">OP_RETURN</a></div><div class="ttdeci">@ OP_RETURN</div><div class="ttdef"><b>Definition</b> <a href="chunk_8h_source.html#l00018">chunk.h:18</a></div></div>
+<div class="ttc" id="astructChunk_html"><div class="ttname"><a href="structChunk.html">Chunk</a></div><div class="ttdoc">Base chunk structure.</div><div class="ttdef"><b>Definition</b> <a href="chunk_8h_source.html#l00024">chunk.h:24</a></div></div>
+<div class="ttc" id="astructChunk_html_a204895ec1d6938143d35f422fda0b060"><div class="ttname"><a href="structChunk.html#a204895ec1d6938143d35f422fda0b060">Chunk::count</a></div><div class="ttdeci">size_t count</div><div class="ttdef"><b>Definition</b> <a href="chunk_8h_source.html#l00026">chunk.h:26</a></div></div>
+<div class="ttc" id="astructChunk_html_a3bd97432faba57c9187c7d264995b33f"><div class="ttname"><a href="structChunk.html#a3bd97432faba57c9187c7d264995b33f">Chunk::code</a></div><div class="ttdeci">uint8_t * code</div><div class="ttdef"><b>Definition</b> <a href="chunk_8h_source.html#l00025">chunk.h:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

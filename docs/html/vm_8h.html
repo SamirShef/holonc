@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>holonc: include/vm/vm.h File Reference</title>
+<title>holonc: /mnt/disk_ext4_0/holonc/include/vm/vm.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,17 +93,131 @@ $(function(){initNavTree('vm_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Header file for define VM.  
+<p>Header file for define <a class="el" href="structVM.html" title="Base VM structure.">VM</a>.  
 <a href="#details">More...</a></p>
-
+<div class="textblock"><code>#include &quot;<a class="el" href="chunk_8h_source.html">chunk.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for vm.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="vm_8h__incl.png" border="0" usemap="#a_2mnt_2disk__ext4__0_2holonc_2include_2vm_2vm_8h" loading="lazy" alt=""/></div>
+<map name="a_2mnt_2disk__ext4__0_2holonc_2include_2vm_2vm_8h" id="a_2mnt_2disk__ext4__0_2holonc_2include_2vm_2vm_8h">
+<area shape="rect" title="Header file for define VM." alt="" coords="47,5,210,48"/>
+<area shape="rect" href="chunk_8h.html" title="Header file for define chunk structure." alt="" coords="95,96,162,123"/>
+<area shape="poly" title=" " alt="" coords="132,49,132,80,126,80,126,49"/>
+<area shape="rect" title=" " alt="" coords="5,171,74,197"/>
+<area shape="poly" title=" " alt="" coords="115,125,68,163,65,159,112,121"/>
+<area shape="rect" title=" " alt="" coords="97,171,160,197"/>
+<area shape="poly" title=" " alt="" coords="132,123,132,155,126,155,126,123"/>
+<area shape="rect" title=" " alt="" coords="185,171,249,197"/>
+<area shape="poly" title=" " alt="" coords="146,121,192,159,188,163,142,125"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="vm_8h__dep__incl.png" border="0" usemap="#a_2mnt_2disk__ext4__0_2holonc_2include_2vm_2vm_8hdep" loading="lazy" alt=""/></div>
+<map name="a_2mnt_2disk__ext4__0_2holonc_2include_2vm_2vm_8hdep" id="a_2mnt_2disk__ext4__0_2holonc_2include_2vm_2vm_8hdep">
+<area shape="rect" title="Header file for define VM." alt="" coords="99,5,262,48"/>
+<area shape="rect" href="main_8c.html" title="Compilator&#39;s entry point." alt="" coords="5,96,169,139"/>
+<area shape="poly" title=" " alt="" coords="150,61,110,98,107,94,146,57"/>
+<area shape="rect" href="vm_8c.html" title="Implementation of." alt="" coords="193,96,357,139"/>
+<area shape="poly" title=" " alt="" coords="215,57,255,94,251,98,212,61"/>
+</map>
+</div>
+</div>
 <p><a href="vm_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:VM" id="r_VM"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVM.html">VM</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base <a class="el" href="structVM.html" title="Base VM structure.">VM</a> structure.  <a href="structVM.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ad8c84abbf9ca339d92a4dddd473b7478" id="r_ad8c84abbf9ca339d92a4dddd473b7478"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVM.html">VM</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8c84abbf9ca339d92a4dddd473b7478">create_vm</a> (<a class="el" href="structChunk.html">Chunk</a> *chunk)</td></tr>
+<tr class="memdesc:ad8c84abbf9ca339d92a4dddd473b7478"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for create chunk.  <br /></td></tr>
+<tr class="memitem:ad032bf020ac343ca3d00239c0f80ca7a" id="r_ad032bf020ac343ca3d00239c0f80ca7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad032bf020ac343ca3d00239c0f80ca7a">free_vm</a> (<a class="el" href="structVM.html">VM</a> *vm)</td></tr>
+<tr class="memdesc:ad032bf020ac343ca3d00239c0f80ca7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to free up the memory allocated for the <a class="el" href="structVM.html" title="Base VM structure.">VM</a>.  <br /></td></tr>
+</table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header file for define VM. </p>
+<div class="textblock"><p>Header file for define <a class="el" href="structVM.html" title="Base VM structure.">VM</a>. </p>
 <p>Copyright (c) 2025 SamirShef</p>
 <p>SPDX-License-Identifier: MIT </p>
 
 <p class="definition">Definition in file <a class="el" href="vm_8h_source.html">vm.h</a>.</p>
-</div></div><!-- contents -->
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="ad8c84abbf9ca339d92a4dddd473b7478" name="ad8c84abbf9ca339d92a4dddd473b7478"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8c84abbf9ca339d92a4dddd473b7478">&#9670;&#160;</a></span>create_vm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structVM.html">VM</a> * create_vm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structChunk.html">Chunk</a> *</td>          <td class="paramname"><span class="paramname"><em>chunk</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function for create chunk. </p>
+<p>This function creates a new <a class="el" href="structVM.html" title="Base VM structure.">VM</a> in memory, initializes it with zeros, and returns it</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to new chunk </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00013">13</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="vm_8h_ad8c84abbf9ca339d92a4dddd473b7478_icgraph.png" border="0" usemap="#avm_8h_ad8c84abbf9ca339d92a4dddd473b7478_icgraph" loading="lazy" alt=""/></div>
+<map name="avm_8h_ad8c84abbf9ca339d92a4dddd473b7478_icgraph" id="avm_8h_ad8c84abbf9ca339d92a4dddd473b7478_icgraph">
+<area shape="rect" title="Function for create chunk." alt="" coords="103,5,185,32"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad032bf020ac343ca3d00239c0f80ca7a" name="ad032bf020ac343ca3d00239c0f80ca7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad032bf020ac343ca3d00239c0f80ca7a">&#9670;&#160;</a></span>free_vm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_vm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVM.html">VM</a> *</td>          <td class="paramname"><span class="paramname"><em>vm</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to free up the memory allocated for the <a class="el" href="structVM.html" title="Base VM structure.">VM</a>. </p>
+<p>This function deletes an array of chunks from memory and deletes the <a class="el" href="structVM.html" title="Base VM structure.">VM</a> itself</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vm</td><td>Pointer to the <a class="el" href="structVM.html" title="Base VM structure.">VM</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="vm_8c_source.html#l00020">20</a> of file <a class="el" href="vm_8c_source.html">vm.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="vm_8h_ad032bf020ac343ca3d00239c0f80ca7a_icgraph.png" border="0" usemap="#avm_8h_ad032bf020ac343ca3d00239c0f80ca7a_icgraph" loading="lazy" alt=""/></div>
+<map name="avm_8h_ad032bf020ac343ca3d00239c0f80ca7a_icgraph" id="avm_8h_ad032bf020ac343ca3d00239c0f80ca7a_icgraph">
+<area shape="rect" title="Function to free up the memory allocated for the VM." alt="" coords="103,5,171,32"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

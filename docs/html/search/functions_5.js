@@ -1,0 +1,17 @@
+var searchData=
+[
+  ['lex_5fadd_5fkeyword_0',['lex_add_keyword',['../lexer_8c.html#afdb3aea8e928a4e6dee637f7983fbb18',1,'lex_add_keyword(Keywords *keywords, const char *key, TokenType value):&#160;lexer.c'],['../lexer_8h.html#afdb3aea8e928a4e6dee637f7983fbb18',1,'lex_add_keyword(Keywords *keywords, const char *key, TokenType value):&#160;lexer.c']]],
+  ['lex_5fadd_5ftoken_1',['lex_add_token',['../lexer_8c.html#a3e1a9bc97fee711a396c2bc832165af1',1,'lex_add_token(TokenArray *tokens, Token *token):&#160;lexer.c'],['../lexer_8h.html#a3e1a9bc97fee711a396c2bc832165af1',1,'lex_add_token(TokenArray *tokens, Token *token):&#160;lexer.c']]],
+  ['lex_5fadvance_2',['lex_advance',['../lexer_8c.html#af37b42415a56a01910dd849962c8cec8',1,'lexer.c']]],
+  ['lex_5fcreate_5ftoken_3',['lex_create_token',['../lexer_8c.html#aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd',1,'lex_create_token(TokenType type, const char *value, uint32_t line, uint32_t column):&#160;lexer.c'],['../lexer_8h.html#aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd',1,'lex_create_token(TokenType type, const char *value, uint32_t line, uint32_t column):&#160;lexer.c']]],
+  ['lex_5fget_5fescape_5fsequence_4',['lex_get_escape_sequence',['../lexer_8c.html#a75a3a26fb5b6c4dd9ba874aebd377073',1,'lex_get_escape_sequence():&#160;lexer.c'],['../lexer_8h.html#a75a3a26fb5b6c4dd9ba874aebd377073',1,'lex_get_escape_sequence():&#160;lexer.c']]],
+  ['lex_5finit_5',['lex_init',['../lexer_8c.html#ac40ab05e01194ad04553b4d1f22489ea',1,'lex_init(const char *src):&#160;lexer.c'],['../lexer_8h.html#ac40ab05e01194ad04553b4d1f22489ea',1,'lex_init(const char *src):&#160;lexer.c']]],
+  ['lex_5finit_5fkeywords_6',['lex_init_keywords',['../lexer_8c.html#ad02e160db50a5887aed1c98d22d57e11',1,'lex_init_keywords(Keywords *keywords):&#160;lexer.c'],['../lexer_8h.html#ad02e160db50a5887aed1c98d22d57e11',1,'lex_init_keywords(Keywords *keywords):&#160;lexer.c']]],
+  ['lex_5fpeek_7',['lex_peek',['../lexer_8c.html#a71651cde2df91445ea5c3b85f2ec8865',1,'lexer.c']]],
+  ['lex_5ftokenize_8',['lex_tokenize',['../lexer_8c.html#a78fb3ebf2f5f7cee0c2a5b2932ce30b1',1,'lex_tokenize():&#160;lexer.c'],['../lexer_8h.html#a78fb3ebf2f5f7cee0c2a5b2932ce30b1',1,'lex_tokenize():&#160;lexer.c']]],
+  ['lex_5ftokenize_5fcharacter_5flit_9',['lex_tokenize_character_lit',['../lexer_8c.html#ac7e82d9219ab1a208f3d016e0d1a7935',1,'lex_tokenize_character_lit():&#160;lexer.c'],['../lexer_8h.html#ac7e82d9219ab1a208f3d016e0d1a7935',1,'lex_tokenize_character_lit():&#160;lexer.c']]],
+  ['lex_5ftokenize_5fid_10',['lex_tokenize_id',['../lexer_8c.html#ac36c7e6a0463c68259855252342b01e6',1,'lex_tokenize_id():&#160;lexer.c'],['../lexer_8h.html#ac36c7e6a0463c68259855252342b01e6',1,'lex_tokenize_id():&#160;lexer.c']]],
+  ['lex_5ftokenize_5fnumber_11',['lex_tokenize_number',['../lexer_8c.html#a88560b0c619c1dc649255a6198156da0',1,'lex_tokenize_number():&#160;lexer.c'],['../lexer_8h.html#a88560b0c619c1dc649255a6198156da0',1,'lex_tokenize_number():&#160;lexer.c']]],
+  ['lex_5ftokenize_5fop_12',['lex_tokenize_op',['../lexer_8c.html#af9959271da47322edaf7d4a79c119944',1,'lex_tokenize_op():&#160;lexer.c'],['../lexer_8h.html#af9959271da47322edaf7d4a79c119944',1,'lex_tokenize_op():&#160;lexer.c']]],
+  ['lex_5ftokenize_5fstring_5flit_13',['lex_tokenize_string_lit',['../lexer_8c.html#aeba6c3bf8f2d4db2a9ede0b34946873e',1,'lex_tokenize_string_lit():&#160;lexer.c'],['../lexer_8h.html#aeba6c3bf8f2d4db2a9ede0b34946873e',1,'lex_tokenize_string_lit():&#160;lexer.c']]]
+];

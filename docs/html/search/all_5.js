@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8c.html#ac0f2228420376f4db7e1274f2b41667c',1,'main.c']]],
-  ['main_2ec_1',['main.c',['../main_8c.html',1,'']]],
-  ['max_5fchank_5fcodes_5fcount_2',['MAX_CHANK_CODES_COUNT',['../chunk_8h.html#a75c081066a0bbc46bc37f531b3b0d796',1,'chunk.h']]]
+  ['instruction_5fname_5fby_5fcode_0',['instruction_name_by_code',['../chunk_8c.html#a546ab740bbd74ae2c684de303ce75aca',1,'instruction_name_by_code(OpCode code):&#160;chunk.c'],['../chunk_8h.html#a546ab740bbd74ae2c684de303ce75aca',1,'instruction_name_by_code(OpCode code):&#160;chunk.c']]],
+  ['ip_1',['ip',['../structVM.html#ac857809b612485e36b6933cd2b4c7cba',1,'VM']]]
 ];

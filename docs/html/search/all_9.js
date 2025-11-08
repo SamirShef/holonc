@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['value_0',['value',['../structToken.html#a06939408d17b4230a3b2698b818ee42c',1,'Token']]],
-  ['vm_2eh_1',['vm.h',['../vm_8h.html',1,'']]]
+  ['op_5freturn_0',['OP_RETURN',['../chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20ad436c18b194473f5ec64c28b774e41b3',1,'chunk.h']]],
+  ['opcode_1',['OpCode',['../chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20',1,'chunk.h']]]
 ];

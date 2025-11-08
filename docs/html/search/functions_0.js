@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['create_5fchunk_0',['create_chunk',['../chunk_8c.html#ae056750c965090646f509c2c0e24a9d2',1,'create_chunk():&#160;chunk.c'],['../chunk_8h.html#ae056750c965090646f509c2c0e24a9d2',1,'create_chunk():&#160;chunk.c']]]
+  ['add_5fcode_0',['add_code',['../chunk_8c.html#ae222cf9b9859726a78d345a85d38f79f',1,'add_code(Chunk *chunk, OpCode code):&#160;chunk.c'],['../chunk_8h.html#ae222cf9b9859726a78d345a85d38f79f',1,'add_code(Chunk *chunk, OpCode code):&#160;chunk.c']]]
 ];

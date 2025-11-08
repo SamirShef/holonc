@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>holonc: src/vm/chunk.c File Reference</title>
+<title>holonc: /mnt/disk_ext4_0/holonc/src/vm/chunk.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -96,20 +96,29 @@ $(function(){initNavTree('chunk_8c.html','',''); });
 <p>Implementation of.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="chunk_8h_source.html">../../include/vm/chunk.h</a>&quot;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for chunk.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="chunk_8c__incl.png" border="0" usemap="#asrc_2vm_2chunk_8c" loading="lazy" alt=""/></div>
-<map name="asrc_2vm_2chunk_8c" id="asrc_2vm_2chunk_8c">
-<area shape="rect" title="Implementation of." alt="" coords="24,5,135,32"/>
-<area shape="rect" href="chunk_8h.html" title="Header file for define chunk structure." alt="" coords="59,80,218,107"/>
-<area shape="poly" title=" " alt="" coords="92,31,121,66,117,69,88,34"/>
-<area shape="rect" title=" " alt="" coords="5,155,69,181"/>
-<area shape="poly" title=" " alt="" coords="74,34,61,55,50,81,44,111,40,139,35,139,38,110,45,79,56,53,69,31"/>
-<area shape="poly" title=" " alt="" coords="122,109,69,147,66,143,119,105"/>
-<area shape="rect" title=" " alt="" coords="106,155,170,181"/>
-<area shape="poly" title=" " alt="" coords="141,107,141,139,136,139,136,107"/>
+<div class="center"><img src="chunk_8c__incl.png" border="0" usemap="#a_2mnt_2disk__ext4__0_2holonc_2src_2vm_2chunk_8c" loading="lazy" alt=""/></div>
+<map name="a_2mnt_2disk__ext4__0_2holonc_2src_2vm_2chunk_8c" id="a_2mnt_2disk__ext4__0_2holonc_2src_2vm_2chunk_8c">
+<area shape="rect" title="Implementation of." alt="" coords="86,5,249,48"/>
+<area shape="rect" href="chunk_8h.html" title="Header file for define chunk structure." alt="" coords="88,96,247,123"/>
+<area shape="poly" title=" " alt="" coords="170,49,170,80,165,80,165,49"/>
+<area shape="rect" title=" " alt="" coords="5,171,74,197"/>
+<area shape="poly" title=" " alt="" coords="127,51,96,71,70,98,55,126,46,156,41,155,50,124,65,94,93,67,124,46"/>
+<area shape="rect" title=" " alt="" coords="116,171,179,197"/>
+<area shape="poly" title=" " alt="" coords="127,51,100,71,79,97,76,114,83,131,96,146,113,160,110,164,93,150,79,134,71,115,74,95,96,67,123,46"/>
+<area shape="rect" title=" " alt="" coords="227,171,292,197"/>
+<area shape="poly" title=" " alt="" coords="211,46,239,67,261,95,269,125,268,155,262,155,263,126,256,97,235,71,208,51"/>
+<area shape="rect" title=" " alt="" coords="321,96,382,123"/>
+<area shape="poly" title=" " alt="" coords="216,46,310,87,308,92,214,51"/>
+<area shape="poly" title=" " alt="" coords="147,126,76,165,74,160,144,121"/>
+<area shape="poly" title=" " alt="" coords="167,124,158,157,152,155,161,122"/>
+<area shape="poly" title=" " alt="" coords="185,121,234,159,230,163,182,125"/>
 </map>
 </div>
 </div>
@@ -119,16 +128,62 @@ Include dependency graph for chunk.c:</div>
 Functions</h2></td></tr>
 <tr class="memitem:ae056750c965090646f509c2c0e24a9d2" id="r_ae056750c965090646f509c2c0e24a9d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structChunk.html">Chunk</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae056750c965090646f509c2c0e24a9d2">create_chunk</a> ()</td></tr>
 <tr class="memdesc:ae056750c965090646f509c2c0e24a9d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for create chunk.  <br /></td></tr>
-<tr class="memitem:a8d88cfbb10c69b79613ce6e471c0b48a" id="r_a8d88cfbb10c69b79613ce6e471c0b48a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d88cfbb10c69b79613ce6e471c0b48a">set_code</a> (<a class="el" href="structChunk.html">Chunk</a> *chunk, <a class="el" href="chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20">OpCode</a> code)</td></tr>
-<tr class="memdesc:a8d88cfbb10c69b79613ce6e471c0b48a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for add new operation code into chunk.  <br /></td></tr>
+<tr class="memitem:ae222cf9b9859726a78d345a85d38f79f" id="r_ae222cf9b9859726a78d345a85d38f79f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae222cf9b9859726a78d345a85d38f79f">add_code</a> (<a class="el" href="structChunk.html">Chunk</a> *chunk, <a class="el" href="chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20">OpCode</a> code)</td></tr>
+<tr class="memdesc:ae222cf9b9859726a78d345a85d38f79f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for add new operation code into chunk.  <br /></td></tr>
 <tr class="memitem:ae42388329631282d26cb07187397a788" id="r_ae42388329631282d26cb07187397a788"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae42388329631282d26cb07187397a788">free_chunk</a> (<a class="el" href="structChunk.html">Chunk</a> *chunk)</td></tr>
 <tr class="memdesc:ae42388329631282d26cb07187397a788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to free up the memory allocated for the chunk.  <br /></td></tr>
+<tr class="memitem:a703aa5ae9eb8fbb45d415f9645920bfe" id="r_a703aa5ae9eb8fbb45d415f9645920bfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a703aa5ae9eb8fbb45d415f9645920bfe">disassembly_chunk</a> (<a class="el" href="structChunk.html">Chunk</a> *chunk)</td></tr>
+<tr class="memitem:ab50820bfbb6f1211ea5ee34ec80c8b41" id="r_ab50820bfbb6f1211ea5ee34ec80c8b41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab50820bfbb6f1211ea5ee34ec80c8b41">print_instruction</a> (<a class="el" href="chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20">OpCode</a> code)</td></tr>
+<tr class="memitem:a546ab740bbd74ae2c684de303ce75aca" id="r_a546ab740bbd74ae2c684de303ce75aca"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a546ab740bbd74ae2c684de303ce75aca">instruction_name_by_code</a> (<a class="el" href="chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20">OpCode</a> code)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of. </p>
 
 <p class="definition">Definition in file <a class="el" href="chunk_8c_source.html">chunk.c</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="ae222cf9b9859726a78d345a85d38f79f" name="ae222cf9b9859726a78d345a85d38f79f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae222cf9b9859726a78d345a85d38f79f">&#9670;&#160;</a></span>add_code()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void add_code </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structChunk.html">Chunk</a> *</td>          <td class="paramname"><span class="paramname"><em>chunk</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20">OpCode</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function for add new operation code into chunk. </p>
+<p>This function adds the passed operation code to the chunk and increments the count of exists codes in chunk</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chunk</td><td>Pointer to the chunk </td></tr>
+    <tr><td class="paramname">code</td><td>Operation code </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="chunk_8c_source.html#l00023">23</a> of file <a class="el" href="chunk_8c_source.html">chunk.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="chunk_8c_ae222cf9b9859726a78d345a85d38f79f_icgraph.png" border="0" usemap="#achunk_8c_ae222cf9b9859726a78d345a85d38f79f_icgraph" loading="lazy" alt=""/></div>
+<map name="achunk_8c_ae222cf9b9859726a78d345a85d38f79f_icgraph" id="achunk_8c_ae222cf9b9859726a78d345a85d38f79f_icgraph">
+<area shape="rect" title="Function for add new operation code into chunk." alt="" coords="103,5,180,32"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ae056750c965090646f509c2c0e24a9d2" name="ae056750c965090646f509c2c0e24a9d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae056750c965090646f509c2c0e24a9d2">&#9670;&#160;</a></span>create_chunk()</h2>
 
@@ -148,7 +203,58 @@ Functions</h2></td></tr>
 <p>This function creates a new chunk in memory, initializes it with zeros, and returns it</p>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to new chunk </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="chunk_8c_source.html#l00020">20</a> of file <a class="el" href="chunk_8c_source.html">chunk.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk_8c_source.html#l00016">16</a> of file <a class="el" href="chunk_8c_source.html">chunk.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="chunk_8c_ae056750c965090646f509c2c0e24a9d2_icgraph.png" border="0" usemap="#achunk_8c_ae056750c965090646f509c2c0e24a9d2_icgraph" loading="lazy" alt=""/></div>
+<map name="achunk_8c_ae056750c965090646f509c2c0e24a9d2_icgraph" id="achunk_8c_ae056750c965090646f509c2c0e24a9d2_icgraph">
+<area shape="rect" title="Function for create chunk." alt="" coords="103,5,202,32"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a703aa5ae9eb8fbb45d415f9645920bfe" name="a703aa5ae9eb8fbb45d415f9645920bfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a703aa5ae9eb8fbb45d415f9645920bfe">&#9670;&#160;</a></span>disassembly_chunk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disassembly_chunk </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structChunk.html">Chunk</a> *</td>          <td class="paramname"><span class="paramname"><em>chunk</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="chunk_8c_source.html#l00033">33</a> of file <a class="el" href="chunk_8c_source.html">chunk.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="chunk_8c_a703aa5ae9eb8fbb45d415f9645920bfe_cgraph.png" border="0" usemap="#achunk_8c_a703aa5ae9eb8fbb45d415f9645920bfe_cgraph" loading="lazy" alt=""/></div>
+<map name="achunk_8c_a703aa5ae9eb8fbb45d415f9645920bfe_cgraph" id="achunk_8c_a703aa5ae9eb8fbb45d415f9645920bfe_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,142,32"/>
+<area shape="rect" href="chunk_8c.html#ab50820bfbb6f1211ea5ee34ec80c8b41" title=" " alt="" coords="190,5,303,32"/>
+<area shape="poly" title=" " alt="" coords="142,16,174,16,174,21,142,21"/>
+<area shape="rect" href="chunk_8c.html#a546ab740bbd74ae2c684de303ce75aca" title=" " alt="" coords="351,5,527,32"/>
+<area shape="poly" title=" " alt="" coords="303,16,335,16,335,21,303,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="chunk_8c_a703aa5ae9eb8fbb45d415f9645920bfe_icgraph.png" border="0" usemap="#achunk_8c_a703aa5ae9eb8fbb45d415f9645920bfe_icgraph" loading="lazy" alt=""/></div>
+<map name="achunk_8c_a703aa5ae9eb8fbb45d415f9645920bfe_icgraph" id="achunk_8c_a703aa5ae9eb8fbb45d415f9645920bfe_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,239,32"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -168,7 +274,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Function to free up the memory allocated for the chunk. </p>
-<p>This function deletes an array of chunk operation codes from memory and deletes the chunk itself</p>
+<p>This function deletes an array of operations codes from memory and deletes the chunk itself</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">chunk</td><td>Pointer to the chunk </td></tr>
@@ -176,40 +282,81 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="chunk_8c_source.html#l00045">45</a> of file <a class="el" href="chunk_8c_source.html">chunk.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chunk_8c_source.html#l00028">28</a> of file <a class="el" href="chunk_8c_source.html">chunk.c</a>.</p>
 
 </div>
 </div>
-<a id="a8d88cfbb10c69b79613ce6e471c0b48a" name="a8d88cfbb10c69b79613ce6e471c0b48a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d88cfbb10c69b79613ce6e471c0b48a">&#9670;&#160;</a></span>set_code()</h2>
+<a id="a546ab740bbd74ae2c684de303ce75aca" name="a546ab740bbd74ae2c684de303ce75aca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a546ab740bbd74ae2c684de303ce75aca">&#9670;&#160;</a></span>instruction_name_by_code()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void set_code </td>
+          <td class="memname">const char * instruction_name_by_code </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structChunk.html">Chunk</a> *</td>          <td class="paramname"><span class="paramname"><em>chunk</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20">OpCode</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20">OpCode</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Function for add new operation code into chunk. </p>
-<p>This function sets the passed opcode to the chunk and increments the count of exists codes in chunk</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">chunk</td><td>Pointer to the chunk </td></tr>
-    <tr><td class="paramname">code</td><td>Operation code </td></tr>
-  </table>
-  </dd>
-</dl>
+<p class="definition">Definition at line <a class="el" href="chunk_8c_source.html#l00043">43</a> of file <a class="el" href="chunk_8c_source.html">chunk.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="chunk_8c_a546ab740bbd74ae2c684de303ce75aca_icgraph.png" border="0" usemap="#achunk_8c_a546ab740bbd74ae2c684de303ce75aca_icgraph" loading="lazy" alt=""/></div>
+<map name="achunk_8c_a546ab740bbd74ae2c684de303ce75aca_icgraph" id="achunk_8c_a546ab740bbd74ae2c684de303ce75aca_icgraph">
+<area shape="rect" title=" " alt="" coords="448,5,625,32"/>
+<area shape="rect" href="chunk_8c.html#ab50820bfbb6f1211ea5ee34ec80c8b41" title=" " alt="" coords="287,5,400,32"/>
+<area shape="poly" title=" " alt="" coords="433,21,401,21,401,16,433,16"/>
+<area shape="rect" href="chunk_8c.html#a703aa5ae9eb8fbb45d415f9645920bfe" title=" " alt="" coords="103,5,239,32"/>
+<area shape="poly" title=" " alt="" coords="271,21,239,21,239,16,271,16"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
 
-<p class="definition">Definition at line <a class="el" href="chunk_8c_source.html#l00034">34</a> of file <a class="el" href="chunk_8c_source.html">chunk.c</a>.</p>
+</div>
+</div>
+<a id="ab50820bfbb6f1211ea5ee34ec80c8b41" name="ab50820bfbb6f1211ea5ee34ec80c8b41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab50820bfbb6f1211ea5ee34ec80c8b41">&#9670;&#160;</a></span>print_instruction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_instruction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20">OpCode</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="chunk_8c_source.html#l00039">39</a> of file <a class="el" href="chunk_8c_source.html">chunk.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="chunk_8c_ab50820bfbb6f1211ea5ee34ec80c8b41_cgraph.png" border="0" usemap="#achunk_8c_ab50820bfbb6f1211ea5ee34ec80c8b41_cgraph" loading="lazy" alt=""/></div>
+<map name="achunk_8c_ab50820bfbb6f1211ea5ee34ec80c8b41_cgraph" id="achunk_8c_ab50820bfbb6f1211ea5ee34ec80c8b41_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,119,32"/>
+<area shape="rect" href="chunk_8c.html#a546ab740bbd74ae2c684de303ce75aca" title=" " alt="" coords="167,5,343,32"/>
+<area shape="poly" title=" " alt="" coords="119,16,151,16,151,21,119,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="chunk_8c_ab50820bfbb6f1211ea5ee34ec80c8b41_icgraph.png" border="0" usemap="#achunk_8c_ab50820bfbb6f1211ea5ee34ec80c8b41_icgraph" loading="lazy" alt=""/></div>
+<map name="achunk_8c_ab50820bfbb6f1211ea5ee34ec80c8b41_icgraph" id="achunk_8c_ab50820bfbb6f1211ea5ee34ec80c8b41_icgraph">
+<area shape="rect" title=" " alt="" coords="287,5,400,32"/>
+<area shape="rect" href="chunk_8c.html#a703aa5ae9eb8fbb45d415f9645920bfe" title=" " alt="" coords="103,5,239,32"/>
+<area shape="poly" title=" " alt="" coords="271,21,239,21,239,16,271,16"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
 
 </div>
 </div>

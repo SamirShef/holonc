@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>holonc: include/lexer/lexer.h File Reference</title>
+<title>holonc: /mnt/disk_ext4_0/holonc/include/lexer/lexer.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -95,15 +95,735 @@ $(function(){initNavTree('lexer_8h.html','',''); });
 
 <p>Header file for lexing analyze of source code on Holon.  
 <a href="#details">More...</a></p>
-
+<div class="textblock"><code>#include &quot;<a class="el" href="token_8h_source.html">token.h</a>&quot;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for lexer.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h__incl.png" border="0" usemap="#a_2mnt_2disk__ext4__0_2holonc_2include_2lexer_2lexer_8h" loading="lazy" alt=""/></div>
+<map name="a_2mnt_2disk__ext4__0_2holonc_2include_2lexer_2lexer_8h" id="a_2mnt_2disk__ext4__0_2holonc_2include_2lexer_2lexer_8h">
+<area shape="rect" title="Header file for lexing analyze of source code on Holon." alt="" coords="5,5,169,48"/>
+<area shape="rect" href="token_8h.html" title="Header file for define token structure." alt="" coords="10,96,74,123"/>
+<area shape="poly" title=" " alt="" coords="78,50,59,84,54,81,73,47"/>
+<area shape="rect" title=" " alt="" coords="98,96,166,123"/>
+<area shape="poly" title=" " alt="" coords="101,47,120,81,115,84,96,50"/>
+<area shape="rect" title=" " alt="" coords="10,171,74,197"/>
+<area shape="poly" title=" " alt="" coords="44,123,44,155,39,155,39,123"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h__dep__incl.png" border="0" usemap="#a_2mnt_2disk__ext4__0_2holonc_2include_2lexer_2lexer_8hdep" loading="lazy" alt=""/></div>
+<map name="a_2mnt_2disk__ext4__0_2holonc_2include_2lexer_2lexer_8hdep" id="a_2mnt_2disk__ext4__0_2holonc_2include_2lexer_2lexer_8hdep">
+<area shape="rect" title="Header file for lexing analyze of source code on Holon." alt="" coords="99,5,262,48"/>
+<area shape="rect" href="lexer_8c.html" title="Implementation of." alt="" coords="5,96,169,139"/>
+<area shape="poly" title=" " alt="" coords="150,61,110,98,107,94,146,57"/>
+<area shape="rect" href="main_8c.html" title="Compilator&#39;s entry point." alt="" coords="193,96,357,139"/>
+<area shape="poly" title=" " alt="" coords="215,57,255,94,251,98,212,61"/>
+</map>
+</div>
+</div>
 <p><a href="lexer_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:TokenArray" id="r_TokenArray"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTokenArray.html">TokenArray</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of tokens structure.  <a href="structTokenArray.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Entry" id="r_Entry"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEntry.html">Entry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure of the base element of the hash-table.  <a href="structEntry.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Keywords" id="r_Keywords"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structKeywords.html">Keywords</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash-table of keywords.  <a href="structKeywords.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ad02e160db50a5887aed1c98d22d57e11" id="r_ad02e160db50a5887aed1c98d22d57e11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad02e160db50a5887aed1c98d22d57e11">lex_init_keywords</a> (<a class="el" href="structKeywords.html">Keywords</a> *<a class="el" href="lexer_8c.html#ac4864e9dae315725e2d2af1d06d7abb1">keywords</a>)</td></tr>
+<tr class="memdesc:ad02e160db50a5887aed1c98d22d57e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for initializing all Holon's keywords.  <br /></td></tr>
+<tr class="memitem:afdb3aea8e928a4e6dee637f7983fbb18" id="r_afdb3aea8e928a4e6dee637f7983fbb18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdb3aea8e928a4e6dee637f7983fbb18">lex_add_keyword</a> (<a class="el" href="structKeywords.html">Keywords</a> *<a class="el" href="lexer_8c.html#ac4864e9dae315725e2d2af1d06d7abb1">keywords</a>, const char *key, <a class="el" href="token_8h.html#afa91e1934f818659a4e2b0c8ce1214b0">TokenType</a> value)</td></tr>
+<tr class="memdesc:afdb3aea8e928a4e6dee637f7983fbb18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for add new keyword into global variable 'keywords'.  <br /></td></tr>
+<tr class="memitem:ac40ab05e01194ad04553b4d1f22489ea" id="r_ac40ab05e01194ad04553b4d1f22489ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac40ab05e01194ad04553b4d1f22489ea">lex_init</a> (const char *src)</td></tr>
+<tr class="memdesc:ac40ab05e01194ad04553b4d1f22489ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for initialization of lexer.  <br /></td></tr>
+<tr class="memitem:aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd" id="r_aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structToken.html">Token</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd">lex_create_token</a> (<a class="el" href="token_8h.html#afa91e1934f818659a4e2b0c8ce1214b0">TokenType</a> type, const char *value, uint32_t <a class="el" href="lexer_8c.html#a311196674133e618759342d6be698474">line</a>, uint32_t <a class="el" href="lexer_8c.html#a02d24854d2cd9723e4b2169e974b6f12">column</a>)</td></tr>
+<tr class="memdesc:aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for create new token.  <br /></td></tr>
+<tr class="memitem:a78fb3ebf2f5f7cee0c2a5b2932ce30b1" id="r_a78fb3ebf2f5f7cee0c2a5b2932ce30b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structTokenArray.html">TokenArray</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78fb3ebf2f5f7cee0c2a5b2932ce30b1">lex_tokenize</a> ()</td></tr>
+<tr class="memdesc:a78fb3ebf2f5f7cee0c2a5b2932ce30b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for tokenizing string.  <br /></td></tr>
+<tr class="memitem:a3e1a9bc97fee711a396c2bc832165af1" id="r_a3e1a9bc97fee711a396c2bc832165af1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e1a9bc97fee711a396c2bc832165af1">lex_add_token</a> (<a class="el" href="structTokenArray.html">TokenArray</a> *tokens, <a class="el" href="structToken.html">Token</a> *token)</td></tr>
+<tr class="memdesc:a3e1a9bc97fee711a396c2bc832165af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for add new token into array of tokens.  <br /></td></tr>
+<tr class="memitem:a88560b0c619c1dc649255a6198156da0" id="r_a88560b0c619c1dc649255a6198156da0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structToken.html">Token</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88560b0c619c1dc649255a6198156da0">lex_tokenize_number</a> ()</td></tr>
+<tr class="memdesc:a88560b0c619c1dc649255a6198156da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funtion for tokenizing number literal.  <br /></td></tr>
+<tr class="memitem:ac36c7e6a0463c68259855252342b01e6" id="r_ac36c7e6a0463c68259855252342b01e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structToken.html">Token</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac36c7e6a0463c68259855252342b01e6">lex_tokenize_id</a> ()</td></tr>
+<tr class="memdesc:ac36c7e6a0463c68259855252342b01e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funtion for tokenizing identifier.  <br /></td></tr>
+<tr class="memitem:aeba6c3bf8f2d4db2a9ede0b34946873e" id="r_aeba6c3bf8f2d4db2a9ede0b34946873e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structToken.html">Token</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeba6c3bf8f2d4db2a9ede0b34946873e">lex_tokenize_string_lit</a> ()</td></tr>
+<tr class="memdesc:aeba6c3bf8f2d4db2a9ede0b34946873e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funtion for tokenizing string literal.  <br /></td></tr>
+<tr class="memitem:ac7e82d9219ab1a208f3d016e0d1a7935" id="r_ac7e82d9219ab1a208f3d016e0d1a7935"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structToken.html">Token</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7e82d9219ab1a208f3d016e0d1a7935">lex_tokenize_character_lit</a> ()</td></tr>
+<tr class="memdesc:ac7e82d9219ab1a208f3d016e0d1a7935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funtion for tokenizing character literal.  <br /></td></tr>
+<tr class="memitem:af9959271da47322edaf7d4a79c119944" id="r_af9959271da47322edaf7d4a79c119944"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structToken.html">Token</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9959271da47322edaf7d4a79c119944">lex_tokenize_op</a> ()</td></tr>
+<tr class="memdesc:af9959271da47322edaf7d4a79c119944"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funtion for tokenizing opeartor.  <br /></td></tr>
+<tr class="memitem:a75a3a26fb5b6c4dd9ba874aebd377073" id="r_a75a3a26fb5b6c4dd9ba874aebd377073"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75a3a26fb5b6c4dd9ba874aebd377073">lex_get_escape_sequence</a> ()</td></tr>
+<tr class="memdesc:a75a3a26fb5b6c4dd9ba874aebd377073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for getting escape-secuence character.  <br /></td></tr>
+</table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for lexing analyze of source code on Holon. </p>
 <p>Copyright (c) 2025 SamirShef</p>
 <p>SPDX-License-Identifier: MIT </p>
 
 <p class="definition">Definition in file <a class="el" href="lexer_8h_source.html">lexer.h</a>.</p>
-</div></div><!-- contents -->
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="afdb3aea8e928a4e6dee637f7983fbb18" name="afdb3aea8e928a4e6dee637f7983fbb18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdb3aea8e928a4e6dee637f7983fbb18">&#9670;&#160;</a></span>lex_add_keyword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lex_add_keyword </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structKeywords.html">Keywords</a> *</td>          <td class="paramname"><span class="paramname"><em>keywords</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="token_8h.html#afa91e1934f818659a4e2b0c8ce1214b0">TokenType</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function for add new keyword into global variable 'keywords'. </p>
+<p>This function adds a new keyword based on the passed values to the global variable 'keywords'</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keywords</td><td>Pointer to global variable 'keywords' </td></tr>
+    <tr><td class="paramname">key</td><td>String-type key (keyword) </td></tr>
+    <tr><td class="paramname">value</td><td>TokenType-type value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00039">39</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_afdb3aea8e928a4e6dee637f7983fbb18_icgraph.png" border="0" usemap="#alexer_8h_afdb3aea8e928a4e6dee637f7983fbb18_icgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_afdb3aea8e928a4e6dee637f7983fbb18_icgraph" id="alexer_8h_afdb3aea8e928a4e6dee637f7983fbb18_icgraph">
+<area shape="rect" title="Function for add new keyword into global variable &#39;keywords&#39;." alt="" coords="386,5,509,32"/>
+<area shape="rect" href="lexer_8c.html#ad02e160db50a5887aed1c98d22d57e11" title="Function for initializing all Holon&#39;s keywords." alt="" coords="213,5,338,32"/>
+<area shape="poly" title=" " alt="" coords="371,21,339,21,339,16,371,16"/>
+<area shape="rect" href="lexer_8c.html#ac40ab05e01194ad04553b4d1f22489ea" title="Function for initialization of lexer." alt="" coords="103,5,165,32"/>
+<area shape="poly" title=" " alt="" coords="197,21,166,21,166,16,197,16"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3e1a9bc97fee711a396c2bc832165af1" name="a3e1a9bc97fee711a396c2bc832165af1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e1a9bc97fee711a396c2bc832165af1">&#9670;&#160;</a></span>lex_add_token()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lex_add_token </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structTokenArray.html">TokenArray</a> *</td>          <td class="paramname"><span class="paramname"><em>tokens</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structToken.html">Token</a> *</td>          <td class="paramname"><span class="paramname"><em>token</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function for add new token into array of tokens. </p>
+<p>This function adds a new token to the array of tokens</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tokens</td><td>Pointer to array of tokens </td></tr>
+    <tr><td class="paramname">token</td><td>Pointer to new token </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00095">95</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_a3e1a9bc97fee711a396c2bc832165af1_icgraph.png" border="0" usemap="#alexer_8h_a3e1a9bc97fee711a396c2bc832165af1_icgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_a3e1a9bc97fee711a396c2bc832165af1_icgraph" id="alexer_8h_a3e1a9bc97fee711a396c2bc832165af1_icgraph">
+<area shape="rect" title="Function for add new token into array of tokens." alt="" coords="245,5,350,32"/>
+<area shape="rect" href="lexer_8c.html#a78fb3ebf2f5f7cee0c2a5b2932ce30b1" title="Function for tokenizing string." alt="" coords="103,5,197,32"/>
+<area shape="poly" title=" " alt="" coords="229,21,198,21,198,16,229,16"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd" name="aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd">&#9670;&#160;</a></span>lex_create_token()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structToken.html">Token</a> * lex_create_token </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="token_8h.html#afa91e1934f818659a4e2b0c8ce1214b0">TokenType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>line</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>column</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function for create new token. </p>
+<p>This function create a new token based on the passed values and returns it</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td><a class="el" href="structToken.html" title="Base token structure.">Token</a> type </td></tr>
+    <tr><td class="paramname">value</td><td><a class="el" href="structToken.html" title="Base token structure.">Token</a> string-type value </td></tr>
+    <tr><td class="paramname">line</td><td><a class="el" href="structToken.html" title="Base token structure.">Token</a> line coordinate </td></tr>
+    <tr><td class="paramname">column</td><td><a class="el" href="structToken.html" title="Base token structure.">Token</a> column coordinate</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Created token </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00057">57</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd_icgraph.png" border="0" usemap="#alexer_8h_aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd_icgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd_icgraph" id="alexer_8h_aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd_icgraph">
+<area shape="rect" title="Function for create new token." alt="" coords="465,107,586,133"/>
+<area shape="rect" href="lexer_8c.html#ac7e82d9219ab1a208f3d016e0d1a7935" title="Funtion for tokenizing character literal." alt="" coords="245,5,417,32"/>
+<area shape="poly" title=" " alt="" coords="495,99,459,72,416,46,388,35,390,30,419,42,462,67,498,94"/>
+<area shape="rect" href="lexer_8c.html#ac36c7e6a0463c68259855252342b01e6" title="Funtion for tokenizing identifier." alt="" coords="276,56,387,83"/>
+<area shape="poly" title=" " alt="" coords="456,105,385,86,386,81,457,100"/>
+<area shape="rect" href="lexer_8c.html#a88560b0c619c1dc649255a6198156da0" title="Funtion for tokenizing number literal." alt="" coords="259,107,403,133"/>
+<area shape="poly" title=" " alt="" coords="450,123,404,123,404,117,450,117"/>
+<area shape="rect" href="lexer_8c.html#af9959271da47322edaf7d4a79c119944" title="Funtion for tokenizing opeartor." alt="" coords="274,157,389,184"/>
+<area shape="poly" title=" " alt="" coords="457,140,386,159,385,154,456,135"/>
+<area shape="rect" href="lexer_8c.html#aeba6c3bf8f2d4db2a9ede0b34946873e" title="Funtion for tokenizing string literal." alt="" coords="256,208,406,235"/>
+<area shape="poly" title=" " alt="" coords="498,146,462,173,419,198,390,210,388,205,416,194,459,168,495,141"/>
+<area shape="rect" href="lexer_8c.html#a78fb3ebf2f5f7cee0c2a5b2932ce30b1" title="Function for tokenizing string." alt="" coords="103,107,197,133"/>
+<area shape="poly" title=" " alt="" coords="259,40,246,46,201,77,166,108,163,104,198,73,244,42,257,36"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,107,55,133"/>
+<area shape="poly" title=" " alt="" coords="87,123,55,123,55,117,87,117"/>
+<area shape="poly" title=" " alt="" coords="267,90,198,110,197,104,265,85"/>
+<area shape="poly" title=" " alt="" coords="244,123,197,123,197,117,244,117"/>
+<area shape="poly" title=" " alt="" coords="265,155,197,136,198,130,267,150"/>
+<area shape="poly" title=" " alt="" coords="257,204,244,198,198,167,163,136,166,132,201,163,246,194,259,200"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a75a3a26fb5b6c4dd9ba874aebd377073" name="a75a3a26fb5b6c4dd9ba874aebd377073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75a3a26fb5b6c4dd9ba874aebd377073">&#9670;&#160;</a></span>lex_get_escape_sequence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char lex_get_escape_sequence </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function for getting escape-secuence character. </p>
+<p>This function determines the escape-sequence based on the current character and returns it</p>
+<dl class="section return"><dt>Returns</dt><dd>Escape-secuence character </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00328">328</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_a75a3a26fb5b6c4dd9ba874aebd377073_cgraph.png" border="0" usemap="#alexer_8h_a75a3a26fb5b6c4dd9ba874aebd377073_cgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_a75a3a26fb5b6c4dd9ba874aebd377073_cgraph" id="alexer_8h_a75a3a26fb5b6c4dd9ba874aebd377073_cgraph">
+<area shape="rect" title="Function for getting escape&#45;secuence character." alt="" coords="5,5,181,32"/>
+<area shape="rect" href="lexer_8c.html#af37b42415a56a01910dd849962c8cec8" title=" " alt="" coords="229,5,323,32"/>
+<area shape="poly" title=" " alt="" coords="181,16,213,16,213,21,181,21"/>
+<area shape="rect" href="lexer_8c.html#a71651cde2df91445ea5c3b85f2ec8865" title=" " alt="" coords="371,5,444,32"/>
+<area shape="poly" title=" " alt="" coords="323,16,356,16,356,21,323,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_a75a3a26fb5b6c4dd9ba874aebd377073_icgraph.png" border="0" usemap="#alexer_8h_a75a3a26fb5b6c4dd9ba874aebd377073_icgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_a75a3a26fb5b6c4dd9ba874aebd377073_icgraph" id="alexer_8h_a75a3a26fb5b6c4dd9ba874aebd377073_icgraph">
+<area shape="rect" title="Function for getting escape&#45;secuence character." alt="" coords="465,31,641,57"/>
+<area shape="rect" href="lexer_8c.html#ac7e82d9219ab1a208f3d016e0d1a7935" title="Funtion for tokenizing character literal." alt="" coords="245,5,417,32"/>
+<area shape="poly" title=" " alt="" coords="450,35,417,31,418,26,450,30"/>
+<area shape="rect" href="lexer_8c.html#aeba6c3bf8f2d4db2a9ede0b34946873e" title="Funtion for tokenizing string literal." alt="" coords="256,56,406,83"/>
+<area shape="poly" title=" " alt="" coords="450,58,407,63,407,58,450,53"/>
+<area shape="rect" href="lexer_8c.html#a78fb3ebf2f5f7cee0c2a5b2932ce30b1" title="Function for tokenizing string." alt="" coords="103,31,197,57"/>
+<area shape="poly" title=" " alt="" coords="230,35,198,40,197,35,229,30"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,31,55,57"/>
+<area shape="poly" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
+<area shape="poly" title=" " alt="" coords="240,59,197,53,198,48,241,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac40ab05e01194ad04553b4d1f22489ea" name="ac40ab05e01194ad04553b4d1f22489ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac40ab05e01194ad04553b4d1f22489ea">&#9670;&#160;</a></span>lex_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lex_init </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function for initialization of lexer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>Source code on Holon </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00044">44</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_ac40ab05e01194ad04553b4d1f22489ea_cgraph.png" border="0" usemap="#alexer_8h_ac40ab05e01194ad04553b4d1f22489ea_cgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_ac40ab05e01194ad04553b4d1f22489ea_cgraph" id="alexer_8h_ac40ab05e01194ad04553b4d1f22489ea_cgraph">
+<area shape="rect" title="Function for initialization of lexer." alt="" coords="5,5,68,32"/>
+<area shape="rect" href="lexer_8c.html#ad02e160db50a5887aed1c98d22d57e11" title="Function for initializing all Holon&#39;s keywords." alt="" coords="116,5,241,32"/>
+<area shape="poly" title=" " alt="" coords="68,16,100,16,100,21,68,21"/>
+<area shape="rect" href="lexer_8c.html#afdb3aea8e928a4e6dee637f7983fbb18" title="Function for add new keyword into global variable &#39;keywords&#39;." alt="" coords="289,5,411,32"/>
+<area shape="poly" title=" " alt="" coords="241,16,274,16,274,21,241,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_ac40ab05e01194ad04553b4d1f22489ea_icgraph.png" border="0" usemap="#alexer_8h_ac40ab05e01194ad04553b4d1f22489ea_icgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_ac40ab05e01194ad04553b4d1f22489ea_icgraph" id="alexer_8h_ac40ab05e01194ad04553b4d1f22489ea_icgraph">
+<area shape="rect" title="Function for initialization of lexer." alt="" coords="103,5,165,32"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad02e160db50a5887aed1c98d22d57e11" name="ad02e160db50a5887aed1c98d22d57e11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad02e160db50a5887aed1c98d22d57e11">&#9670;&#160;</a></span>lex_init_keywords()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lex_init_keywords </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structKeywords.html">Keywords</a> *</td>          <td class="paramname"><span class="paramname"><em>keywords</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function for initializing all Holon's keywords. </p>
+<p>This function adds all Holon keywords to the global variable 'keywords'</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keywords</td><td>Pointer to global variable 'keywords' </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00029">29</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_ad02e160db50a5887aed1c98d22d57e11_cgraph.png" border="0" usemap="#alexer_8h_ad02e160db50a5887aed1c98d22d57e11_cgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_ad02e160db50a5887aed1c98d22d57e11_cgraph" id="alexer_8h_ad02e160db50a5887aed1c98d22d57e11_cgraph">
+<area shape="rect" title="Function for initializing all Holon&#39;s keywords." alt="" coords="5,5,131,32"/>
+<area shape="rect" href="lexer_8c.html#afdb3aea8e928a4e6dee637f7983fbb18" title="Function for add new keyword into global variable &#39;keywords&#39;." alt="" coords="179,5,301,32"/>
+<area shape="poly" title=" " alt="" coords="131,16,163,16,163,21,131,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_ad02e160db50a5887aed1c98d22d57e11_icgraph.png" border="0" usemap="#alexer_8h_ad02e160db50a5887aed1c98d22d57e11_icgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_ad02e160db50a5887aed1c98d22d57e11_icgraph" id="alexer_8h_ad02e160db50a5887aed1c98d22d57e11_icgraph">
+<area shape="rect" title="Function for initializing all Holon&#39;s keywords." alt="" coords="213,5,338,32"/>
+<area shape="rect" href="lexer_8c.html#ac40ab05e01194ad04553b4d1f22489ea" title="Function for initialization of lexer." alt="" coords="103,5,165,32"/>
+<area shape="poly" title=" " alt="" coords="197,21,166,21,166,16,197,16"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a78fb3ebf2f5f7cee0c2a5b2932ce30b1" name="a78fb3ebf2f5f7cee0c2a5b2932ce30b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78fb3ebf2f5f7cee0c2a5b2932ce30b1">&#9670;&#160;</a></span>lex_tokenize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structTokenArray.html">TokenArray</a> * lex_tokenize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function for tokenizing string. </p>
+<dl class="section return"><dt>Returns</dt><dd>List of the tokens </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00066">66</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_a78fb3ebf2f5f7cee0c2a5b2932ce30b1_cgraph.png" border="0" usemap="#alexer_8h_a78fb3ebf2f5f7cee0c2a5b2932ce30b1_cgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_a78fb3ebf2f5f7cee0c2a5b2932ce30b1_cgraph" id="alexer_8h_a78fb3ebf2f5f7cee0c2a5b2932ce30b1_cgraph">
+<area shape="rect" title="Function for tokenizing string." alt="" coords="5,233,100,260"/>
+<area shape="rect" href="lexer_8c.html#a3e1a9bc97fee711a396c2bc832165af1" title="Function for add new token into array of tokens." alt="" coords="181,5,286,32"/>
+<area shape="poly" title=" " alt="" coords="54,232,64,196,81,147,108,95,126,70,146,49,166,35,169,39,149,53,130,74,113,98,86,150,69,198,59,234"/>
+<area shape="rect" href="lexer_8c.html#af37b42415a56a01910dd849962c8cec8" title=" " alt="" coords="604,360,699,387"/>
+<area shape="poly" title=" " alt="" coords="56,260,60,311,72,382,84,421,100,458,122,492,149,521,199,557,247,584,293,601,339,608,386,607,435,596,487,576,542,548,562,535,579,518,607,478,627,437,640,401,645,403,632,439,612,481,583,521,565,539,545,553,489,581,437,601,387,612,339,614,292,606,244,589,196,562,146,525,117,495,95,460,79,422,67,383,54,311,51,261"/>
+<area shape="rect" href="lexer_8c.html#a71651cde2df91445ea5c3b85f2ec8865" title=" " alt="" coords="760,208,833,235"/>
+<area shape="poly" title=" " alt="" coords="70,231,104,206,146,182,206,154,254,135,303,121,368,109,466,93,545,86,583,89,622,97,665,112,713,134,751,162,780,194,776,198,747,166,710,138,663,117,621,102,582,94,545,92,467,98,368,115,304,126,255,140,208,158,149,186,107,211,73,235"/>
+<area shape="rect" href="lexer_8c.html#ac7e82d9219ab1a208f3d016e0d1a7935" title="Funtion for tokenizing character literal." alt="" coords="148,411,320,437"/>
+<area shape="poly" title=" " alt="" coords="70,259,210,398,206,401,66,262"/>
+<area shape="rect" href="lexer_8c.html#ac36c7e6a0463c68259855252342b01e6" title="Funtion for tokenizing identifier." alt="" coords="400,512,511,539"/>
+<area shape="poly" title=" " alt="" coords="59,260,67,298,84,349,110,402,128,426,149,447,176,466,205,482,267,504,329,516,385,522,384,527,328,522,265,509,203,486,173,471,146,451,124,430,106,405,79,351,62,299,53,261"/>
+<area shape="rect" href="lexer_8c.html#a88560b0c619c1dc649255a6198156da0" title="Funtion for tokenizing number literal." alt="" coords="384,157,528,184"/>
+<area shape="poly" title=" " alt="" coords="93,230,147,215,262,193,368,178,368,183,263,198,148,220,94,235"/>
+<area shape="rect" href="lexer_8c.html#af9959271da47322edaf7d4a79c119944" title="Funtion for tokenizing opeartor." alt="" coords="398,208,513,235"/>
+<area shape="poly" title=" " alt="" coords="100,241,382,223,382,229,100,246"/>
+<area shape="rect" href="lexer_8c.html#aeba6c3bf8f2d4db2a9ede0b34946873e" title="Funtion for tokenizing string literal." alt="" coords="159,259,309,285"/>
+<area shape="poly" title=" " alt="" coords="101,251,144,257,143,262,100,256"/>
+<area shape="poly" title=" " alt="" coords="664,358,770,244,774,248,667,362"/>
+<area shape="poly" title=" " alt="" coords="279,435,333,448,400,458,472,460,508,455,542,447,588,424,624,395,628,399,591,429,544,452,509,460,472,465,400,464,332,454,278,440"/>
+<area shape="poly" title=" " alt="" coords="246,436,265,462,293,494,328,525,369,548,416,562,454,565,493,558,543,548,595,539,636,530,672,513,710,480,730,453,747,423,771,360,785,299,791,250,796,251,790,300,777,361,752,426,735,456,714,483,675,517,638,535,596,544,544,553,494,564,454,570,415,568,367,553,325,529,289,498,261,466,242,439"/>
+<area shape="rect" href="lexer_8c.html#aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd" title="Function for create new token." alt="" coords="591,259,712,285"/>
+<area shape="poly" title=" " alt="" coords="272,408,597,289,599,294,274,413"/>
+<area shape="rect" href="lexer_8c.html#a75a3a26fb5b6c4dd9ba874aebd377073" title="Function for getting escape&#45;secuence character." alt="" coords="368,411,543,437"/>
+<area shape="poly" title=" " alt="" coords="321,421,352,421,352,427,321,427"/>
+<area shape="poly" title=" " alt="" coords="510,407,589,387,590,392,511,413"/>
+<area shape="poly" title=" " alt="" coords="506,509,542,491,569,470,593,445,630,398,635,401,597,449,572,474,545,496,508,514"/>
+<area shape="poly" title=" " alt="" coords="506,509,554,492,608,468,662,436,710,397,737,361,759,321,785,249,790,251,764,324,742,364,714,401,665,441,610,473,556,497,508,514"/>
+<area shape="poly" title=" " alt="" coords="475,509,508,483,541,448,557,421,566,399,575,375,589,347,626,296,631,299,594,349,580,377,571,401,562,424,545,451,512,487,479,514"/>
+<area shape="poly" title=" " alt="" coords="527,182,545,194,565,218,574,242,581,267,594,296,631,346,626,350,589,299,576,269,569,244,561,221,542,198,524,187"/>
+<area shape="poly" title=" " alt="" coords="528,175,712,200,745,207,744,212,711,205,528,180"/>
+<area shape="poly" title=" " alt="" coords="515,182,545,194,588,219,624,246,621,251,585,223,542,198,513,187"/>
+<area shape="poly" title=" " alt="" coords="476,233,622,348,619,352,473,237"/>
+<area shape="poly" title=" " alt="" coords="514,219,744,219,744,224,514,224"/>
+<area shape="poly" title=" " alt="" coords="511,233,583,252,582,257,510,238"/>
+<area shape="poly" title=" " alt="" coords="293,283,590,356,588,361,292,289"/>
+<area shape="poly" title=" " alt="" coords="242,257,261,230,289,198,325,167,367,143,417,126,461,116,501,114,539,118,618,139,713,174,762,197,760,202,711,178,616,144,539,123,501,119,462,122,418,131,369,148,328,171,293,202,265,234,246,260"/>
+<area shape="poly" title=" " alt="" coords="309,269,576,269,576,275,309,275"/>
+<area shape="poly" title=" " alt="" coords="257,284,424,400,421,404,253,288"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_a78fb3ebf2f5f7cee0c2a5b2932ce30b1_icgraph.png" border="0" usemap="#alexer_8h_a78fb3ebf2f5f7cee0c2a5b2932ce30b1_icgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_a78fb3ebf2f5f7cee0c2a5b2932ce30b1_icgraph" id="alexer_8h_a78fb3ebf2f5f7cee0c2a5b2932ce30b1_icgraph">
+<area shape="rect" title="Function for tokenizing string." alt="" coords="103,5,197,32"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac7e82d9219ab1a208f3d016e0d1a7935" name="ac7e82d9219ab1a208f3d016e0d1a7935"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7e82d9219ab1a208f3d016e0d1a7935">&#9670;&#160;</a></span>lex_tokenize_character_lit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structToken.html">Token</a> * lex_tokenize_character_lit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funtion for tokenizing character literal. </p>
+<p>This function tokenizing character literal and returns new token with <a class="el" href="token_8h.html#afa91e1934f818659a4e2b0c8ce1214b0" title="All tokens types.">TokenType</a>: TOK_CHARACTER_LIT</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to token as character literal </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00167">167</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_ac7e82d9219ab1a208f3d016e0d1a7935_cgraph.png" border="0" usemap="#alexer_8h_ac7e82d9219ab1a208f3d016e0d1a7935_cgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_ac7e82d9219ab1a208f3d016e0d1a7935_cgraph" id="alexer_8h_ac7e82d9219ab1a208f3d016e0d1a7935_cgraph">
+<area shape="rect" title="Funtion for tokenizing character literal." alt="" coords="5,56,178,83"/>
+<area shape="rect" href="lexer_8c.html#af37b42415a56a01910dd849962c8cec8" title=" " alt="" coords="449,31,543,57"/>
+<area shape="poly" title=" " alt="" coords="178,61,433,45,434,51,178,67"/>
+<area shape="rect" href="lexer_8c.html#a71651cde2df91445ea5c3b85f2ec8865" title=" " alt="" coords="591,5,665,32"/>
+<area shape="poly" title=" " alt="" coords="139,53,225,33,322,22,419,16,576,14,576,20,419,21,322,27,226,39,140,58"/>
+<area shape="rect" href="lexer_8c.html#aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd" title="Function for create new token." alt="" coords="253,81,374,108"/>
+<area shape="poly" title=" " alt="" coords="179,77,238,83,238,89,178,82"/>
+<area shape="rect" href="lexer_8c.html#a75a3a26fb5b6c4dd9ba874aebd377073" title="Function for getting escape&#45;secuence character." alt="" coords="226,132,401,159"/>
+<area shape="poly" title=" " alt="" coords="128,81,227,117,249,125,247,130,225,123,126,86"/>
+<area shape="poly" title=" " alt="" coords="543,32,575,26,576,31,544,38"/>
+<area shape="poly" title=" " alt="" coords="373,129,400,118,437,93,469,66,472,70,440,97,402,122,375,134"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_ac7e82d9219ab1a208f3d016e0d1a7935_icgraph.png" border="0" usemap="#alexer_8h_ac7e82d9219ab1a208f3d016e0d1a7935_icgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_ac7e82d9219ab1a208f3d016e0d1a7935_icgraph" id="alexer_8h_ac7e82d9219ab1a208f3d016e0d1a7935_icgraph">
+<area shape="rect" title="Funtion for tokenizing character literal." alt="" coords="245,5,417,32"/>
+<area shape="rect" href="lexer_8c.html#a78fb3ebf2f5f7cee0c2a5b2932ce30b1" title="Function for tokenizing string." alt="" coords="103,5,197,32"/>
+<area shape="poly" title=" " alt="" coords="229,21,197,21,197,16,229,16"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac36c7e6a0463c68259855252342b01e6" name="ac36c7e6a0463c68259855252342b01e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac36c7e6a0463c68259855252342b01e6">&#9670;&#160;</a></span>lex_tokenize_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structToken.html">Token</a> * lex_tokenize_id </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funtion for tokenizing identifier. </p>
+<p>This function tokenizing identifier and returns new token with <a class="el" href="token_8h.html#afa91e1934f818659a4e2b0c8ce1214b0" title="All tokens types.">TokenType</a>: TOK_ID</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to token as identifier </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00121">121</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_ac36c7e6a0463c68259855252342b01e6_cgraph.png" border="0" usemap="#alexer_8h_ac36c7e6a0463c68259855252342b01e6_cgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_ac36c7e6a0463c68259855252342b01e6_cgraph" id="alexer_8h_ac36c7e6a0463c68259855252342b01e6_cgraph">
+<area shape="rect" title="Funtion for tokenizing identifier." alt="" coords="5,56,117,83"/>
+<area shape="rect" href="lexer_8c.html#af37b42415a56a01910dd849962c8cec8" title=" " alt="" coords="178,5,272,32"/>
+<area shape="poly" title=" " alt="" coords="106,53,164,35,166,40,108,58"/>
+<area shape="rect" href="lexer_8c.html#a71651cde2df91445ea5c3b85f2ec8865" title=" " alt="" coords="333,31,406,57"/>
+<area shape="poly" title=" " alt="" coords="117,62,317,46,318,51,117,67"/>
+<area shape="rect" href="lexer_8c.html#aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd" title="Function for create new token." alt="" coords="165,107,285,133"/>
+<area shape="poly" title=" " alt="" coords="108,81,166,99,164,104,106,86"/>
+<area shape="poly" title=" " alt="" coords="273,24,318,32,317,38,272,30"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_ac36c7e6a0463c68259855252342b01e6_icgraph.png" border="0" usemap="#alexer_8h_ac36c7e6a0463c68259855252342b01e6_icgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_ac36c7e6a0463c68259855252342b01e6_icgraph" id="alexer_8h_ac36c7e6a0463c68259855252342b01e6_icgraph">
+<area shape="rect" title="Funtion for tokenizing identifier." alt="" coords="245,5,356,32"/>
+<area shape="rect" href="lexer_8c.html#a78fb3ebf2f5f7cee0c2a5b2932ce30b1" title="Function for tokenizing string." alt="" coords="103,5,197,32"/>
+<area shape="poly" title=" " alt="" coords="229,21,197,21,197,16,229,16"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a88560b0c619c1dc649255a6198156da0" name="a88560b0c619c1dc649255a6198156da0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88560b0c619c1dc649255a6198156da0">&#9670;&#160;</a></span>lex_tokenize_number()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structToken.html">Token</a> * lex_tokenize_number </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funtion for tokenizing number literal. </p>
+<p>This function tokenizing number literal and returns new token with <a class="el" href="token_8h.html#afa91e1934f818659a4e2b0c8ce1214b0" title="All tokens types.">TokenType</a>: TOK_NUMBER_LIT</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to token as number literal </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00100">100</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_a88560b0c619c1dc649255a6198156da0_cgraph.png" border="0" usemap="#alexer_8h_a88560b0c619c1dc649255a6198156da0_cgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_a88560b0c619c1dc649255a6198156da0_cgraph" id="alexer_8h_a88560b0c619c1dc649255a6198156da0_cgraph">
+<area shape="rect" title="Funtion for tokenizing number literal." alt="" coords="5,56,150,83"/>
+<area shape="rect" href="lexer_8c.html#af37b42415a56a01910dd849962c8cec8" title=" " alt="" coords="211,5,305,32"/>
+<area shape="poly" title=" " alt="" coords="127,53,195,33,197,39,129,58"/>
+<area shape="rect" href="lexer_8c.html#a71651cde2df91445ea5c3b85f2ec8865" title=" " alt="" coords="366,31,439,57"/>
+<area shape="poly" title=" " alt="" coords="150,61,350,45,351,51,150,66"/>
+<area shape="rect" href="lexer_8c.html#aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd" title="Function for create new token." alt="" coords="198,107,318,133"/>
+<area shape="poly" title=" " alt="" coords="129,81,194,99,192,105,127,86"/>
+<area shape="poly" title=" " alt="" coords="306,24,351,32,350,38,305,30"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_a88560b0c619c1dc649255a6198156da0_icgraph.png" border="0" usemap="#alexer_8h_a88560b0c619c1dc649255a6198156da0_icgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_a88560b0c619c1dc649255a6198156da0_icgraph" id="alexer_8h_a88560b0c619c1dc649255a6198156da0_icgraph">
+<area shape="rect" title="Funtion for tokenizing number literal." alt="" coords="245,5,389,32"/>
+<area shape="rect" href="lexer_8c.html#a78fb3ebf2f5f7cee0c2a5b2932ce30b1" title="Function for tokenizing string." alt="" coords="103,5,197,32"/>
+<area shape="poly" title=" " alt="" coords="229,21,197,21,197,16,229,16"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af9959271da47322edaf7d4a79c119944" name="af9959271da47322edaf7d4a79c119944"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9959271da47322edaf7d4a79c119944">&#9670;&#160;</a></span>lex_tokenize_op()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structToken.html">Token</a> * lex_tokenize_op </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funtion for tokenizing opeartor. </p>
+<p>This function tokenizing opeartor and returns new token with <a class="el" href="token_8h.html#afa91e1934f818659a4e2b0c8ce1214b0" title="All tokens types.">TokenType</a>: TOK_OP_*</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to token as opeartor </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00194">194</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_af9959271da47322edaf7d4a79c119944_cgraph.png" border="0" usemap="#alexer_8h_af9959271da47322edaf7d4a79c119944_cgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_af9959271da47322edaf7d4a79c119944_cgraph" id="alexer_8h_af9959271da47322edaf7d4a79c119944_cgraph">
+<area shape="rect" title="Funtion for tokenizing opeartor." alt="" coords="5,56,121,83"/>
+<area shape="rect" href="lexer_8c.html#af37b42415a56a01910dd849962c8cec8" title=" " alt="" coords="182,5,276,32"/>
+<area shape="poly" title=" " alt="" coords="109,53,167,35,169,40,110,58"/>
+<area shape="rect" href="lexer_8c.html#a71651cde2df91445ea5c3b85f2ec8865" title=" " alt="" coords="337,31,410,57"/>
+<area shape="poly" title=" " alt="" coords="121,62,321,46,322,51,121,67"/>
+<area shape="rect" href="lexer_8c.html#aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd" title="Function for create new token." alt="" coords="169,107,289,133"/>
+<area shape="poly" title=" " alt="" coords="110,81,169,99,167,104,109,86"/>
+<area shape="poly" title=" " alt="" coords="277,24,322,32,321,38,276,30"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_af9959271da47322edaf7d4a79c119944_icgraph.png" border="0" usemap="#alexer_8h_af9959271da47322edaf7d4a79c119944_icgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_af9959271da47322edaf7d4a79c119944_icgraph" id="alexer_8h_af9959271da47322edaf7d4a79c119944_icgraph">
+<area shape="rect" title="Funtion for tokenizing opeartor." alt="" coords="245,5,360,32"/>
+<area shape="rect" href="lexer_8c.html#a78fb3ebf2f5f7cee0c2a5b2932ce30b1" title="Function for tokenizing string." alt="" coords="103,5,197,32"/>
+<area shape="poly" title=" " alt="" coords="229,21,197,21,197,16,229,16"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aeba6c3bf8f2d4db2a9ede0b34946873e" name="aeba6c3bf8f2d4db2a9ede0b34946873e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba6c3bf8f2d4db2a9ede0b34946873e">&#9670;&#160;</a></span>lex_tokenize_string_lit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structToken.html">Token</a> * lex_tokenize_string_lit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funtion for tokenizing string literal. </p>
+<p>This function tokenizing string literal and returns new token with <a class="el" href="token_8h.html#afa91e1934f818659a4e2b0c8ce1214b0" title="All tokens types.">TokenType</a>: TOK_STRING_LIT</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to token as string literal </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00144">144</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_aeba6c3bf8f2d4db2a9ede0b34946873e_cgraph.png" border="0" usemap="#alexer_8h_aeba6c3bf8f2d4db2a9ede0b34946873e_cgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_aeba6c3bf8f2d4db2a9ede0b34946873e_cgraph" id="alexer_8h_aeba6c3bf8f2d4db2a9ede0b34946873e_cgraph">
+<area shape="rect" title="Funtion for tokenizing string literal." alt="" coords="5,56,156,83"/>
+<area shape="rect" href="lexer_8c.html#af37b42415a56a01910dd849962c8cec8" title=" " alt="" coords="427,31,521,57"/>
+<area shape="poly" title=" " alt="" coords="156,62,411,45,412,51,156,67"/>
+<area shape="rect" href="lexer_8c.html#a71651cde2df91445ea5c3b85f2ec8865" title=" " alt="" coords="569,5,643,32"/>
+<area shape="poly" title=" " alt="" coords="127,53,203,35,300,22,397,16,554,14,554,20,397,21,300,28,204,40,128,58"/>
+<area shape="rect" href="lexer_8c.html#aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd" title="Function for create new token." alt="" coords="231,81,352,108"/>
+<area shape="poly" title=" " alt="" coords="156,76,216,83,215,88,155,81"/>
+<area shape="rect" href="lexer_8c.html#a75a3a26fb5b6c4dd9ba874aebd377073" title="Function for getting escape&#45;secuence character." alt="" coords="204,132,379,159"/>
+<area shape="poly" title=" " alt="" coords="114,81,205,117,225,124,224,129,203,123,112,86"/>
+<area shape="poly" title=" " alt="" coords="521,32,553,26,554,31,522,38"/>
+<area shape="poly" title=" " alt="" coords="351,129,378,118,415,93,447,66,450,70,418,97,380,122,353,134"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_aeba6c3bf8f2d4db2a9ede0b34946873e_icgraph.png" border="0" usemap="#alexer_8h_aeba6c3bf8f2d4db2a9ede0b34946873e_icgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_aeba6c3bf8f2d4db2a9ede0b34946873e_icgraph" id="alexer_8h_aeba6c3bf8f2d4db2a9ede0b34946873e_icgraph">
+<area shape="rect" title="Funtion for tokenizing string literal." alt="" coords="245,5,395,32"/>
+<area shape="rect" href="lexer_8c.html#a78fb3ebf2f5f7cee0c2a5b2932ce30b1" title="Function for tokenizing string." alt="" coords="103,5,197,32"/>
+<area shape="poly" title=" " alt="" coords="230,21,197,21,197,16,230,16"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

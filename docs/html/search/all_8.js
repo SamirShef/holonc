@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['token_0',['Token',['../structToken.html',1,'']]],
-  ['token_2eh_1',['token.h',['../token_8h.html',1,'']]],
-  ['tokentype_2',['TokenType',['../token_8h.html#afa91e1934f818659a4e2b0c8ce1214b0',1,'token.h']]],
-  ['type_3',['type',['../structToken.html#a67919af9f3a80dc0b28a0ab1e6d5bf8a',1,'Token']]]
+  ['main_0',['main',['../main_8c.html#ac0f2228420376f4db7e1274f2b41667c',1,'main.c']]],
+  ['main_2ec_1',['main.c',['../main_8c.html',1,'']]]
 ];

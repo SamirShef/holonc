@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['op_5freturn_0',['OP_RETURN',['../chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20ad436c18b194473f5ec64c28b774e41b3',1,'chunk.h']]],
-  ['opcode_1',['OpCode',['../chunk_8h.html#a7e85f04e30e1c4c4607773335350fe20',1,'chunk.h']]]
+  ['key_0',['key',['../structEntry.html#a1dd63c02eebed827bb7a763c4dbb5c1f',1,'Entry']]],
+  ['keywords_1',['Keywords',['../structKeywords.html',1,'']]],
+  ['keywords_2',['keywords',['../lexer_8c.html#ac4864e9dae315725e2d2af1d06d7abb1',1,'lexer.c']]]
 ];

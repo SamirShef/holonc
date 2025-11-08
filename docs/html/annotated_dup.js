@@ -1,5 +1,9 @@
 var annotated_dup =
 [
     [ "Chunk", "structChunk.html", "structChunk" ],
-    [ "Token", "structToken.html", "structToken" ]
+    [ "Entry", "structEntry.html", "structEntry" ],
+    [ "Keywords", "structKeywords.html", "structKeywords" ],
+    [ "Token", "structToken.html", "structToken" ],
+    [ "TokenArray", "structTokenArray.html", "structTokenArray" ],
+    [ "VM", "structVM.html", "structVM" ]
 ];
