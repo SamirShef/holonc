@@ -161,6 +161,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:af9959271da47322edaf7d4a79c119944"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funtion for tokenizing opeartor.  <br /></td></tr>
 <tr class="memitem:a75a3a26fb5b6c4dd9ba874aebd377073" id="r_a75a3a26fb5b6c4dd9ba874aebd377073"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75a3a26fb5b6c4dd9ba874aebd377073">lex_get_escape_sequence</a> ()</td></tr>
 <tr class="memdesc:a75a3a26fb5b6c4dd9ba874aebd377073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for getting escape-secuence character.  <br /></td></tr>
+<tr class="memitem:a30bc6d55e8f50afc2ed54c0b6d2788f5" id="r_a30bc6d55e8f50afc2ed54c0b6d2788f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30bc6d55e8f50afc2ed54c0b6d2788f5">skip_comment</a> ()</td></tr>
+<tr class="memdesc:a30bc6d55e8f50afc2ed54c0b6d2788f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for skip comments in code.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for lexing analyze of source code on Holon. </p>
@@ -251,7 +253,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00095">95</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00105">105</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -358,7 +360,7 @@ Here is the caller graph for this function:</div>
 <p>This function determines the escape-sequence based on the current character and returns it</p>
 <dl class="section return"><dt>Returns</dt><dd>Escape-secuence character </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00328">328</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00343">343</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -514,44 +516,48 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lexer_8h_a78fb3ebf2f5f7cee0c2a5b2932ce30b1_cgraph.png" border="0" usemap="#alexer_8h_a78fb3ebf2f5f7cee0c2a5b2932ce30b1_cgraph" loading="lazy" alt=""/></div>
 <map name="alexer_8h_a78fb3ebf2f5f7cee0c2a5b2932ce30b1_cgraph" id="alexer_8h_a78fb3ebf2f5f7cee0c2a5b2932ce30b1_cgraph">
-<area shape="rect" title="Function for tokenizing string." alt="" coords="5,233,100,260"/>
+<area shape="rect" title="Function for tokenizing string." alt="" coords="5,284,100,311"/>
 <area shape="rect" href="lexer_8c.html#a3e1a9bc97fee711a396c2bc832165af1" title="Function for add new token into array of tokens." alt="" coords="181,5,286,32"/>
-<area shape="poly" title=" " alt="" coords="54,232,64,196,81,147,108,95,126,70,146,49,166,35,169,39,149,53,130,74,113,98,86,150,69,198,59,234"/>
+<area shape="poly" title=" " alt="" coords="53,283,59,239,75,176,103,109,122,77,146,49,165,35,168,39,149,53,126,80,107,111,80,178,65,240,58,284"/>
 <area shape="rect" href="lexer_8c.html#af37b42415a56a01910dd849962c8cec8" title=" " alt="" coords="604,360,699,387"/>
-<area shape="poly" title=" " alt="" coords="56,260,60,311,72,382,84,421,100,458,122,492,149,521,199,557,247,584,293,601,339,608,386,607,435,596,487,576,542,548,562,535,579,518,607,478,627,437,640,401,645,403,632,439,612,481,583,521,565,539,545,553,489,581,437,601,387,612,339,614,292,606,244,589,196,562,146,525,117,495,95,460,79,422,67,383,54,311,51,261"/>
-<area shape="rect" href="lexer_8c.html#a71651cde2df91445ea5c3b85f2ec8865" title=" " alt="" coords="760,208,833,235"/>
-<area shape="poly" title=" " alt="" coords="70,231,104,206,146,182,206,154,254,135,303,121,368,109,466,93,545,86,583,89,622,97,665,112,713,134,751,162,780,194,776,198,747,166,710,138,663,117,621,102,582,94,545,92,467,98,368,115,304,126,255,140,208,158,149,186,107,211,73,235"/>
-<area shape="rect" href="lexer_8c.html#ac7e82d9219ab1a208f3d016e0d1a7935" title="Funtion for tokenizing character literal." alt="" coords="148,411,320,437"/>
-<area shape="poly" title=" " alt="" coords="70,259,210,398,206,401,66,262"/>
-<area shape="rect" href="lexer_8c.html#ac36c7e6a0463c68259855252342b01e6" title="Funtion for tokenizing identifier." alt="" coords="400,512,511,539"/>
-<area shape="poly" title=" " alt="" coords="59,260,67,298,84,349,110,402,128,426,149,447,176,466,205,482,267,504,329,516,385,522,384,527,328,522,265,509,203,486,173,471,146,451,124,430,106,405,79,351,62,299,53,261"/>
-<area shape="rect" href="lexer_8c.html#a88560b0c619c1dc649255a6198156da0" title="Funtion for tokenizing number literal." alt="" coords="384,157,528,184"/>
-<area shape="poly" title=" " alt="" coords="93,230,147,215,262,193,368,178,368,183,263,198,148,220,94,235"/>
-<area shape="rect" href="lexer_8c.html#af9959271da47322edaf7d4a79c119944" title="Funtion for tokenizing opeartor." alt="" coords="398,208,513,235"/>
-<area shape="poly" title=" " alt="" coords="100,241,382,223,382,229,100,246"/>
-<area shape="rect" href="lexer_8c.html#aeba6c3bf8f2d4db2a9ede0b34946873e" title="Funtion for tokenizing string literal." alt="" coords="159,259,309,285"/>
-<area shape="poly" title=" " alt="" coords="101,251,144,257,143,262,100,256"/>
-<area shape="poly" title=" " alt="" coords="664,358,770,244,774,248,667,362"/>
-<area shape="poly" title=" " alt="" coords="279,435,333,448,400,458,472,460,508,455,542,447,588,424,624,395,628,399,591,429,544,452,509,460,472,465,400,464,332,454,278,440"/>
-<area shape="poly" title=" " alt="" coords="246,436,265,462,293,494,328,525,369,548,416,562,454,565,493,558,543,548,595,539,636,530,672,513,710,480,730,453,747,423,771,360,785,299,791,250,796,251,790,300,777,361,752,426,735,456,714,483,675,517,638,535,596,544,544,553,494,564,454,570,415,568,367,553,325,529,289,498,261,466,242,439"/>
-<area shape="rect" href="lexer_8c.html#aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd" title="Function for create new token." alt="" coords="591,259,712,285"/>
-<area shape="poly" title=" " alt="" coords="272,408,597,289,599,294,274,413"/>
-<area shape="rect" href="lexer_8c.html#a75a3a26fb5b6c4dd9ba874aebd377073" title="Function for getting escape&#45;secuence character." alt="" coords="368,411,543,437"/>
-<area shape="poly" title=" " alt="" coords="321,421,352,421,352,427,321,427"/>
+<area shape="poly" title=" " alt="" coords="94,281,179,259,293,240,356,236,420,239,484,248,544,267,572,282,597,303,635,345,631,349,594,306,569,287,542,272,482,253,420,244,356,242,294,245,180,264,96,286"/>
+<area shape="rect" href="lexer_8c.html#a71651cde2df91445ea5c3b85f2ec8865" title=" " alt="" coords="760,385,833,412"/>
+<area shape="poly" title=" " alt="" coords="57,282,87,219,113,182,146,151,221,100,293,60,364,30,433,14,502,13,537,18,572,27,606,41,642,59,713,110,740,138,760,170,775,206,786,243,797,313,799,370,794,370,792,314,781,244,770,208,756,173,736,141,710,114,639,64,604,46,570,32,536,23,502,18,434,20,366,36,296,64,224,105,149,155,117,186,92,222,61,285"/>
+<area shape="rect" href="lexer_8c.html#ac7e82d9219ab1a208f3d016e0d1a7935" title="Funtion for tokenizing character literal." alt="" coords="148,284,320,311"/>
+<area shape="poly" title=" " alt="" coords="100,295,132,295,132,300,100,300"/>
+<area shape="rect" href="lexer_8c.html#ac36c7e6a0463c68259855252342b01e6" title="Funtion for tokenizing identifier." alt="" coords="400,411,511,437"/>
+<area shape="poly" title=" " alt="" coords="64,310,97,354,121,378,149,396,208,417,270,428,331,431,385,429,385,435,331,437,270,433,207,422,146,401,118,382,93,358,60,313"/>
+<area shape="rect" href="lexer_8c.html#a88560b0c619c1dc649255a6198156da0" title="Funtion for tokenizing number literal." alt="" coords="384,563,528,589"/>
+<area shape="poly" title=" " alt="" coords="62,310,94,370,119,405,149,437,207,477,270,511,332,536,388,555,386,560,330,541,268,516,204,482,146,441,115,409,90,373,57,313"/>
+<area shape="rect" href="lexer_8c.html#af9959271da47322edaf7d4a79c119944" title="Funtion for tokenizing opeartor." alt="" coords="398,613,513,640"/>
+<area shape="poly" title=" " alt="" coords="58,311,64,354,79,415,107,480,126,509,149,535,175,556,203,572,265,598,327,613,383,621,383,626,326,618,263,603,201,577,172,560,146,539,122,513,102,482,74,416,59,355,52,311"/>
+<area shape="rect" href="lexer_8c.html#aeba6c3bf8f2d4db2a9ede0b34946873e" title="Funtion for tokenizing string literal." alt="" coords="159,360,309,387"/>
+<area shape="poly" title=" " alt="" coords="88,309,187,351,185,356,86,314"/>
+<area shape="rect" href="lexer_8c.html#a30bc6d55e8f50afc2ed54c0b6d2788f5" title="Function for skip comments in code." alt="" coords="402,107,509,133"/>
+<area shape="poly" title=" " alt="" coords="62,282,96,241,120,219,146,200,207,171,271,150,333,135,387,125,388,130,334,140,272,155,209,176,149,205,123,223,100,245,66,285"/>
+<area shape="poly" title=" " alt="" coords="699,379,745,387,744,392,699,384"/>
+<area shape="poly" title=" " alt="" coords="320,281,371,277,428,277,487,282,544,295,591,318,628,347,624,352,588,323,542,300,486,287,428,282,372,282,321,286"/>
+<area shape="poly" title=" " alt="" coords="285,281,339,269,404,261,474,258,544,267,609,287,671,316,724,347,766,374,763,379,722,351,668,321,607,292,543,272,474,264,404,266,340,275,286,286"/>
+<area shape="rect" href="lexer_8c.html#aa9b6dfa20c8a4c4a55b2a4ffd9e8f1fd" title="Function for create new token." alt="" coords="591,512,712,539"/>
+<area shape="poly" title=" " alt="" coords="270,309,297,325,322,346,339,374,345,400,351,424,370,447,392,463,412,472,450,480,492,482,544,491,591,504,590,510,543,496,492,487,450,485,410,477,389,467,366,451,347,427,340,401,334,376,318,350,294,329,267,314"/>
+<area shape="rect" href="lexer_8c.html#a75a3a26fb5b6c4dd9ba874aebd377073" title="Function for getting escape&#45;secuence character." alt="" coords="368,309,543,336"/>
+<area shape="poly" title=" " alt="" coords="321,305,353,308,352,314,320,310"/>
+<area shape="poly" title=" " alt="" coords="511,334,590,355,589,360,510,339"/>
 <area shape="poly" title=" " alt="" coords="510,407,589,387,590,392,511,413"/>
-<area shape="poly" title=" " alt="" coords="506,509,542,491,569,470,593,445,630,398,635,401,597,449,572,474,545,496,508,514"/>
-<area shape="poly" title=" " alt="" coords="506,509,554,492,608,468,662,436,710,397,737,361,759,321,785,249,790,251,764,324,742,364,714,401,665,441,610,473,556,497,508,514"/>
-<area shape="poly" title=" " alt="" coords="475,509,508,483,541,448,557,421,566,399,575,375,589,347,626,296,631,299,594,349,580,377,571,401,562,424,545,451,512,487,479,514"/>
-<area shape="poly" title=" " alt="" coords="527,182,545,194,565,218,574,242,581,267,594,296,631,346,626,350,589,299,576,269,569,244,561,221,542,198,524,187"/>
-<area shape="poly" title=" " alt="" coords="528,175,712,200,745,207,744,212,711,205,528,180"/>
-<area shape="poly" title=" " alt="" coords="515,182,545,194,588,219,624,246,621,251,585,223,542,198,513,187"/>
-<area shape="poly" title=" " alt="" coords="476,233,622,348,619,352,473,237"/>
-<area shape="poly" title=" " alt="" coords="514,219,744,219,744,224,514,224"/>
-<area shape="poly" title=" " alt="" coords="511,233,583,252,582,257,510,238"/>
-<area shape="poly" title=" " alt="" coords="293,283,590,356,588,361,292,289"/>
-<area shape="poly" title=" " alt="" coords="242,257,261,230,289,198,325,167,367,143,417,126,461,116,501,114,539,118,618,139,713,174,762,197,760,202,711,178,616,144,539,123,501,119,462,122,418,131,369,148,328,171,293,202,265,234,246,260"/>
-<area shape="poly" title=" " alt="" coords="309,269,576,269,576,275,309,275"/>
-<area shape="poly" title=" " alt="" coords="257,284,424,400,421,404,253,288"/>
+<area shape="poly" title=" " alt="" coords="511,417,744,400,744,405,512,423"/>
+<area shape="poly" title=" " alt="" coords="501,436,545,454,621,500,618,505,542,458,499,440"/>
+<area shape="poly" title=" " alt="" coords="468,560,625,396,629,399,472,564"/>
+<area shape="poly" title=" " alt="" coords="528,583,572,584,620,580,667,569,710,548,739,522,760,490,776,456,786,426,791,428,781,458,765,493,743,526,713,553,669,574,621,586,572,590,528,589"/>
+<area shape="poly" title=" " alt="" coords="510,559,582,541,583,546,511,565"/>
+<area shape="poly" title=" " alt="" coords="513,615,541,600,635,400,640,402,545,603,515,620"/>
+<area shape="poly" title=" " alt="" coords="514,631,560,632,612,627,664,614,688,603,710,589,728,572,743,553,766,509,781,465,789,427,794,428,786,466,771,511,748,556,732,576,713,593,690,607,665,619,613,632,560,637,514,636"/>
+<area shape="poly" title=" " alt="" coords="513,610,542,599,585,574,621,547,624,551,588,578,545,604,515,615"/>
+<area shape="poly" title=" " alt="" coords="309,371,589,371,589,376,309,376"/>
+<area shape="poly" title=" " alt="" coords="239,387,249,439,270,513,287,552,309,590,336,623,370,650,416,676,460,695,502,705,543,708,583,702,624,688,666,666,710,635,732,614,750,589,774,532,787,474,792,427,797,428,792,475,779,533,754,591,736,617,713,639,669,671,626,693,585,707,543,713,501,711,458,700,414,681,366,654,333,627,305,593,283,555,265,515,243,440,234,388"/>
+<area shape="poly" title=" " alt="" coords="247,385,296,439,330,468,369,491,421,509,475,520,528,525,576,526,575,532,527,530,474,525,419,514,367,496,327,472,292,443,243,389"/>
+<area shape="poly" title=" " alt="" coords="295,357,379,337,380,343,296,362"/>
+<area shape="poly" title=" " alt="" coords="475,132,509,162,545,201,599,278,638,345,634,348,595,281,541,204,505,166,472,136"/>
+<area shape="poly" title=" " alt="" coords="509,109,556,106,611,109,665,123,690,134,713,150,736,173,755,200,769,230,780,261,793,321,797,369,792,370,787,321,775,262,764,232,750,203,732,177,710,154,688,139,663,128,610,115,556,112,509,114"/>
 </map>
 </div>
 <div class="dynheader">
@@ -586,7 +592,7 @@ Here is the caller graph for this function:</div>
 <p>This function tokenizing character literal and returns new token with <a class="el" href="token_8h.html#afa91e1934f818659a4e2b0c8ce1214b0" title="All tokens types.">TokenType</a>: TOK_CHARACTER_LIT</p>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to token as character literal </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00167">167</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00182">182</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -639,7 +645,7 @@ Here is the caller graph for this function:</div>
 <p>This function tokenizing identifier and returns new token with <a class="el" href="token_8h.html#afa91e1934f818659a4e2b0c8ce1214b0" title="All tokens types.">TokenType</a>: TOK_ID</p>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to token as identifier </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00121">121</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00136">136</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -689,7 +695,7 @@ Here is the caller graph for this function:</div>
 <p>This function tokenizing number literal and returns new token with <a class="el" href="token_8h.html#afa91e1934f818659a4e2b0c8ce1214b0" title="All tokens types.">TokenType</a>: TOK_NUMBER_LIT</p>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to token as number literal </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00100">100</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00115">115</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -739,7 +745,7 @@ Here is the caller graph for this function:</div>
 <p>This function tokenizing opeartor and returns new token with <a class="el" href="token_8h.html#afa91e1934f818659a4e2b0c8ce1214b0" title="All tokens types.">TokenType</a>: TOK_OP_*</p>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to token as opeartor </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00194">194</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00209">209</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -789,7 +795,7 @@ Here is the caller graph for this function:</div>
 <p>This function tokenizing string literal and returns new token with <a class="el" href="token_8h.html#afa91e1934f818659a4e2b0c8ce1214b0" title="All tokens types.">TokenType</a>: TOK_STRING_LIT</p>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to token as string literal </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00144">144</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00159">159</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -816,6 +822,53 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Funtion for tokenizing string literal." alt="" coords="245,5,395,32"/>
 <area shape="rect" href="lexer_8c.html#a78fb3ebf2f5f7cee0c2a5b2932ce30b1" title="Function for tokenizing string." alt="" coords="103,5,197,32"/>
 <area shape="poly" title=" " alt="" coords="230,21,197,21,197,16,230,16"/>
+<area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a30bc6d55e8f50afc2ed54c0b6d2788f5" name="a30bc6d55e8f50afc2ed54c0b6d2788f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30bc6d55e8f50afc2ed54c0b6d2788f5">&#9670;&#160;</a></span>skip_comment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void skip_comment </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function for skip comments in code. </p>
+<p>This function skipping '//' comments in Holon source code </p>
+
+<p class="definition">Definition at line <a class="el" href="lexer_8c_source.html#l00374">374</a> of file <a class="el" href="lexer_8c_source.html">lexer.c</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_a30bc6d55e8f50afc2ed54c0b6d2788f5_cgraph.png" border="0" usemap="#alexer_8h_a30bc6d55e8f50afc2ed54c0b6d2788f5_cgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_a30bc6d55e8f50afc2ed54c0b6d2788f5_cgraph" id="alexer_8h_a30bc6d55e8f50afc2ed54c0b6d2788f5_cgraph">
+<area shape="rect" title="Function for skip comments in code." alt="" coords="5,31,112,57"/>
+<area shape="rect" href="lexer_8c.html#af37b42415a56a01910dd849962c8cec8" title=" " alt="" coords="160,5,254,32"/>
+<area shape="poly" title=" " alt="" coords="112,32,144,27,145,32,112,38"/>
+<area shape="rect" href="lexer_8c.html#a71651cde2df91445ea5c3b85f2ec8865" title=" " alt="" coords="302,31,375,57"/>
+<area shape="poly" title=" " alt="" coords="112,41,287,41,287,47,112,47"/>
+<area shape="poly" title=" " alt="" coords="255,25,287,31,286,37,254,30"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="lexer_8h_a30bc6d55e8f50afc2ed54c0b6d2788f5_icgraph.png" border="0" usemap="#alexer_8h_a30bc6d55e8f50afc2ed54c0b6d2788f5_icgraph" loading="lazy" alt=""/></div>
+<map name="alexer_8h_a30bc6d55e8f50afc2ed54c0b6d2788f5_icgraph" id="alexer_8h_a30bc6d55e8f50afc2ed54c0b6d2788f5_icgraph">
+<area shape="rect" title="Function for skip comments in code." alt="" coords="245,5,351,32"/>
+<area shape="rect" href="lexer_8c.html#a78fb3ebf2f5f7cee0c2a5b2932ce30b1" title="Function for tokenizing string." alt="" coords="103,5,197,32"/>
+<area shape="poly" title=" " alt="" coords="230,21,198,21,198,16,230,16"/>
 <area shape="rect" href="main_8c.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>

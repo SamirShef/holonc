@@ -14,5 +14,6 @@ var lexer_8h =
     [ "lex_tokenize_id", "lexer_8h.html#ac36c7e6a0463c68259855252342b01e6", null ],
     [ "lex_tokenize_number", "lexer_8h.html#a88560b0c619c1dc649255a6198156da0", null ],
     [ "lex_tokenize_op", "lexer_8h.html#af9959271da47322edaf7d4a79c119944", null ],
-    [ "lex_tokenize_string_lit", "lexer_8h.html#aeba6c3bf8f2d4db2a9ede0b34946873e", null ]
+    [ "lex_tokenize_string_lit", "lexer_8h.html#aeba6c3bf8f2d4db2a9ede0b34946873e", null ],
+    [ "skip_comment", "lexer_8h.html#a30bc6d55e8f50afc2ed54c0b6d2788f5", null ]
 ];
