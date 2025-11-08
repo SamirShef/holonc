@@ -7,9 +7,9 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <stddef.h>
 #include <stdlib.h>
 #include <stdint.h>
-#define MAX_CHANK_CODES_COUNT 256           /**< Maximum count of operations codes in chunk */
 
 /**
  * @brief All bytecode's operations codes
@@ -22,8 +22,8 @@ typedef enum : uint8_t {
  * @brief Base chunk structure
  */
 typedef struct {
-    uint8_t code[MAX_CHANK_CODES_COUNT];        /**< Array of instructions codes */
-    uint32_t count;                             /**< Count of exists codes */
+    uint8_t *code;                              /**< Dynamic array of instructions codes */
+    size_t count;                               /**< Count of exists codes */
 } Chunk;
 
 /**
@@ -53,3 +53,9 @@ void add_code(Chunk *chunk, OpCode code);
  * @param chunk Pointer to the chunk
  */
 void free_chunk(Chunk *chunk);
+
+void disassembly_chunk(Chunk *chunk);
+
+void print_instruction(OpCode code);
+
+const char *instruction_name_by_code(OpCode code);

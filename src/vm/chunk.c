@@ -8,41 +8,44 @@
  */
 
 #include "../../include/vm/chunk.h"
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
 #include <stdlib.h>
 
-/**
- * @brief Function for create chunk
- *
- * This function creates a new chunk in memory, initializes it with zeros, and returns it
- * 
- * @return Pointer to new chunk
- */
 Chunk *create_chunk() {
     Chunk *chunk = (Chunk *)malloc(sizeof(Chunk));
+    chunk->code = malloc(0);
     chunk->count = 0;
     return chunk;
 }
 
-/**
- * @brief Function for add new operation code into chunk
- *
- * This function adds the passed opcode to the chunk and increments the count of exists codes in chunk
- *
- * @param chunk Pointer to the chunk
- * @param code Operation code
- */
 void add_code(Chunk *chunk, OpCode code) {
+    chunk->code = realloc(chunk->code, sizeof(uint8_t) * (chunk->count + 1));
     chunk->code[chunk->count++] = code;
 }
 
-/**
- * @brief Function to free up the memory allocated for the chunk
- *
- * This function deletes an array of chunk operation codes from memory and deletes the chunk itself
- *
- * @param chunk Pointer to the chunk
- */
 void free_chunk(Chunk *chunk) {
     free(chunk->code);
     free(chunk);
+}
+
+void disassembly_chunk(Chunk *chunk) {
+    for (size_t i = 0; i < chunk->count; i++) {
+        print_instruction(chunk->code[i]);
+    }
+}
+
+void print_instruction(OpCode code) {
+    printf("%04d %s\n", code, instruction_name_by_code(code));
+}
+
+const char *instruction_name_by_code(OpCode code) {
+    switch (code) {
+        case OP_RETURN:
+            return "RETURN";
+        default:
+            fprintf(stderr, "Unknown operation code: %04d\n", code);
+            exit(1);
+    }
 }
