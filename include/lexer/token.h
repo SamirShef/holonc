@@ -13,19 +13,26 @@
  * @brief All tokens types
  */
 typedef enum : uint8_t {
-    LET,                        /**< 'let' keyword for variable definition */
+    TOK_LET,                                /**< 'let' keyword for variable definition */
+    TOK_FUN,                                /**< 'fun' keyword for function definition */
+    TOK_IF,                                 /**< 'if' keyword for conditionally expression operator */
+    TOK_ELSE,                               /**< 'else' keyword for else branch in conditionally expression operator */
+    TOK_FOR,                                /**< 'for' keyword for `for` cycle definition */
+    TOK_WHILE,                              /**< 'while' keyword for `while` cycle definition */
 
-    INT_LIT,                    /**< Integer (32-bits) number literal */
-    DOUBLE_LIT,                 /**< Floating poin (64-bits) number literal */
+    TOK_ID,                                 /**< Identifier */
+    TOK_NUMBER_LIT,                         /**< Decimal number literal */
+    TOK_STRING_LIT,                         /**< String literal */
+    TOK_BOOLEAN_LIT                         /**< Boolean literal */
 } TokenType;
 
 /**
  * @brief Base token structure
  */
 typedef struct {
-    TokenType type;             /**< Token's type */
-    const char *value;          /**< Token's string value */
+    TokenType type;                         /**< Token's type */
+    const char *value;                      /**< Token's string value */
 
-    uint32_t line;              /**< Token line coordinate */
-    uint32_t column;            /**< Token column coordinate */
+    uint32_t line;                          /**< Token line coordinate */
+    uint32_t column;                        /**< Token column coordinate */
 } Token;

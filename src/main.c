@@ -8,15 +8,22 @@
  */
 
 #include "../include/vm/vm.h"
+#include "../include/lexer/lexer.h"
+#include <stddef.h>
 #include <stdio.h>
 
 int main(int argc, const char *argv[]) {
-    printf("Hello from holonc!\n");
-    VM *vm = create_vm();
+    lex_init("_aw2 123 12.3 let awda");
+    TokenArray *tokens = lex_tokenize();
+    for (size_t i = 0; i < tokens->count; i++) {
+        printf("%02d : '%s' (%d:%d)\n", tokens->tokens[i]->type, tokens->tokens[i]->value, tokens->tokens[i]->line, tokens->tokens[i]->column);
+    }
+    
     Chunk *chunk = create_chunk();
     add_code(chunk, OP_RETURN);
     add_code(chunk, OP_RETURN);
-    add_chunk(vm, chunk);
+    disassembly_chunk(chunk);
+    VM *vm = create_vm(chunk);
     free_vm(vm);
     return 0;
 }

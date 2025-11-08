@@ -13,8 +13,8 @@
  * @brief Base VM structure
  */
 typedef struct {
-    Chunk **chunks;                     /**< Dynamic array of chunks */
-    uint32_t count;                     /**< Count of exists chunks */
+    Chunk *chunk;                     /**< Chunk */
+    uint8_t ip;                     /**< Pointer to current instruction */
 } VM;
 
 /**
@@ -24,17 +24,7 @@ typedef struct {
  * 
  * @return Pointer to new chunk
  */
-VM *create_vm();
-
-/**
- * @brief Function for add new operation code into chunk
- *
- * This function adds the passed chunk to the VM and increments the count of exists chunks in VM
- *
- * @param vm Pointer to the VM
- * @param chunk Pointer to the chunk
- */
-void add_chunk(VM *vm, Chunk *chunk);
+VM *create_vm(Chunk *chunk);
 
 /**
  * @brief Function to free up the memory allocated for the VM
