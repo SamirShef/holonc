@@ -13,7 +13,7 @@
 #include <stdio.h>
 
 int main(int argc, const char *argv[]) {
-    lex_init("_aw2 123 12.3 let awda");
+    lex_init("_aw2 123 12.3 let awda \'\\n\' \"Hello Holon!\"+ += && /");
     TokenArray *tokens = lex_tokenize();
     for (size_t i = 0; i < tokens->count; i++) {
         printf("%02d : '%s' (%d:%d)\n", tokens->tokens[i]->type, tokens->tokens[i]->value, tokens->tokens[i]->line, tokens->tokens[i]->column);

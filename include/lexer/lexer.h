@@ -126,7 +126,7 @@ Token *lex_tokenize_string_lit();
  *
  * @return Pointer to token as character literal
  */
-Token *lex_tokenize_char_lit();
+Token *lex_tokenize_character_lit();
 
 /**
  * @brief Funtion for tokenizing opeartor
@@ -136,3 +136,12 @@ Token *lex_tokenize_char_lit();
  * @return Pointer to token as opeartor
  */
 Token *lex_tokenize_op();
+
+/**
+ * @brief Function for getting escape-secuence character
+ *
+ * This function determines the escape-sequence based on the current character and returns it
+ *
+ * @return Escape-secuence character
+ */
+const char lex_get_escape_sequence();
