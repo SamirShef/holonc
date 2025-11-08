@@ -145,3 +145,10 @@ Token *lex_tokenize_op();
  * @return Escape-secuence character
  */
 const char lex_get_escape_sequence();
+
+/**
+ * @brief Function for skip comments in code
+ *
+ * This function skipping '//' comments in Holon source code
+ */
+void skip_comment();

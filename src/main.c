@@ -11,19 +11,30 @@
 #include "../include/lexer/lexer.h"
 #include <stddef.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(int argc, const char *argv[]) {
-    lex_init("_aw2 123 12.3 let awda \'\\n\' \"Hello Holon!\"+ += && /");
-    TokenArray *tokens = lex_tokenize();
-    for (size_t i = 0; i < tokens->count; i++) {
-        printf("%02d : '%s' (%d:%d)\n", tokens->tokens[i]->type, tokens->tokens[i]->value, tokens->tokens[i]->line, tokens->tokens[i]->column);
+    if (argc != 2) {
+        fprintf(stderr, "Use: holonc path/to/source.hn\n");
+        exit(1);
+    }
+
+    FILE *file = fopen(argv[1], "r");
+
+    if (file == NULL) {
+        fprintf(stderr, "File '%s' does not exist!\n", argv[1]);
+        exit(1);
     }
     
-    Chunk *chunk = create_chunk();
-    add_code(chunk, OP_RETURN);
-    add_code(chunk, OP_RETURN);
-    disassembly_chunk(chunk);
-    VM *vm = create_vm(chunk);
-    free_vm(vm);
+    fseek(file, 0, SEEK_END);
+    size_t file_size = ftell(file);
+    rewind(file);
+    char *buffer = malloc(sizeof(char) * (file_size + 1));
+    size_t readed_bytes = fread(buffer, sizeof(char), file_size, file);
+    buffer[readed_bytes] = '\0';
+    fclose(file);
+
+    lex_init(buffer);
+    TokenArray *tokens = lex_tokenize();
     return 0;
 }

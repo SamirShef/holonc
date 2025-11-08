@@ -1,0 +1,6 @@
+// JUST EXAMPLE: UNSUPPORTED YET
+fun foo(a) {
+    a = "Hello world!"
+    let b = 10
+    let c = true
+}

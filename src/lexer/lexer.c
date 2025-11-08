@@ -66,11 +66,21 @@ Token *lex_create_token(TokenType type, const char *value, uint32_t line, uint32
 TokenArray *lex_tokenize() {
     TokenArray *tokens = malloc(sizeof(TokenArray));
     tokens->tokens = malloc(0);
+    tokens->count = 0;
 
     while (pos < source_len) {
         const char c = lex_peek(0);
         if (c == ' ' || c == '\n') {
             lex_advance();
+        }
+        else if (c == '/') {
+            if (lex_peek(1) == '/') {
+                skip_comment();
+                continue;
+            }
+            else {
+                lex_add_token(tokens, lex_tokenize_op());
+            }
         }
         else if (isdigit(c)) {
             lex_add_token(tokens, lex_tokenize_number());
@@ -93,7 +103,12 @@ TokenArray *lex_tokenize() {
 }
 
 void lex_add_token(TokenArray *tokens, Token *token) {
-    tokens->tokens = realloc(tokens->tokens, sizeof(Token) * (tokens->count + 1));
+    Token **new_tokens = realloc(tokens->tokens, sizeof(Token) * (tokens->count + 1));
+    if (new_tokens == NULL) {
+        fprintf(stderr, "Error of re-allocated memory!\n");
+        exit(1);
+    }
+    tokens->tokens = new_tokens;
     tokens->tokens[tokens->count++] = token;
 }
 
@@ -301,7 +316,7 @@ Token *lex_tokenize_op() {
             lex_advance();
             return lex_create_token(TOK_OP_RBRACKET, "]", tmp_l, tmp_c);
         default:
-            fprintf(stderr, "Unsupported operator: '%c'", c);
+            fprintf(stderr, "Unsupported operator: '%c' %zu\n", c, source_len);
             exit(1);
     }
 }
@@ -351,7 +366,15 @@ const char lex_get_escape_sequence() {
         case '?':
             return '\?';
         default:
-            fprintf(stderr, "Unsupported escape-secuence: '\\%c'", c);
+            fprintf(stderr, "Unsupported escape-secuence: '\\%c'\n", c);
             exit(1);
+    }
+}
+
+void skip_comment() {
+    lex_advance();
+    lex_advance();
+    while (pos < source_len && lex_peek(0) != '\n') {
+        lex_advance();
     }
 }
